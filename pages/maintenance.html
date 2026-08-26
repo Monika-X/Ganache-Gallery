@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Maintenance & Spring Update | Ganache Gallery</title>
+  <meta name="description" content="Ganache Gallery custom dessert studio is currently hand-crafting new menu items and updating digital tasting suites. Re-opening shortly.">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body style="background: var(--bg-dark-accent); color: var(--color-vanilla);">
+
+  <!-- MINIMAL MAINTENANCE HEADER -->
+  <header class="header" style="background: rgba(24, 17, 16, 0.9);">
+    <div class="container header-container">
+      <a href="../index.html" class="brand-logo">
+        <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
+        <div class="brand-title" style="color: #fff;">Ganache <span>Gallery</span></div>
+      </a>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" title="Toggle Light/Dark Mode"><i class="fa-solid fa-sun"></i></button>
+        <button class="icon-btn rtl-toggle" title="Toggle Text Orientation"><i class="fa-solid fa-language"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: GRAND MAINTENANCE HERO -->
+  <section class="page-hero" style="min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div class="container-narrow">
+      <span class="tag-label" style="background: rgba(201, 168, 106, 0.2); color: var(--color-champagne-gold);">Spring 2026 Atelier Refresh</span>
+      <h1 class="page-hero-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem); margin: 1rem 0;">Hand-Crafting New Culinary Masterpieces</h1>
+      <p style="font-size: 1.15rem; color: var(--color-blush); max-width: 650px; margin: 0 auto 2.5rem auto;">Our digital studio and online tasting suite are currently undergoing scheduled maintenance as we reveal our 2026 Haute Couture Collection.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: LIVE COUNTDOWN TIMER -->
+  <section class="section-padding" style="padding-top: 0;">
+    <div class="container-narrow">
+      <div style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 3rem; text-align: center;">
+        <h3 style="font-size: 1.2rem; color: var(--color-champagne-gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2rem;">Re-Opening Countdown</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" id="countdown-timer">
+          <div>
+            <div id="days" style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; color: #fff;">03</div>
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-blush);">Days</span>
+          </div>
+
+          <div>
+            <div id="hours" style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; color: #fff;">14</div>
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-blush);">Hours</span>
+          </div>
+
+          <div>
+            <div id="minutes" style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; color: #fff;">42</div>
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-blush);">Minutes</span>
+          </div>
+
+          <div>
+            <div id="seconds" style="font-family: var(--font-serif); font-size: 3rem; font-weight: 700; color: var(--color-champagne-gold);">18</div>
+            <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-blush);">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: VIP EARLY ACCESS REGISTRATION -->
+  <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+    <div class="container-narrow text-center">
+      <span class="tag-label" style="background: rgba(201, 168, 106, 0.2); color: var(--color-champagne-gold);">VIP Priority List</span>
+      <h2 class="section-title" style="color: #fff;">Be The First To Taste The New Menu</h2>
+      <p style="color: var(--color-blush); margin-bottom: 2rem;">Register your email to receive an exclusive early access invitation to our Paris tasting parlor when we re-open.</p>
+
+      <form style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap;" onsubmit="event.preventDefault(); alert('You have been added to the VIP Re-Opening Access List!');">
+        <input type="email" class="form-control" placeholder="Enter your email address" style="flex-grow: 1; background: rgba(255,255,255,0.1); color: #fff; border-color: var(--border-gold);" required>
+        <button type="submit" class="btn btn-gold">Join VIP Access</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- SECTION 4: SNEAK PEEK PREVIEW GALLERY -->
+  <section class="section-padding">
+    <div class="container text-center">
+      <span class="tag-label" style="background: rgba(201, 168, 106, 0.2); color: var(--color-champagne-gold);">First Look</span>
+      <h2 class="section-title" style="color: #fff;">Sneak Peek: 2026 Collection</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" style="border-radius: var(--radius-md); height: 260px; width: 100%; object-fit: cover;" alt="Upcoming Tier 1">
+        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80" style="border-radius: var(--radius-md); height: 260px; width: 100%; object-fit: cover;" alt="Upcoming Macarons 2">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" style="border-radius: var(--radius-md); height: 260px; width: 100%; object-fit: cover;" alt="Upcoming Tier 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: URGENT CUSTOM INQUIRY CONTACTS -->
+  <section class="section-padding" style="background: rgba(255,255,255,0.03);">
+    <div class="container-narrow text-center">
+      <h3 style="font-size: 1.5rem; color: var(--color-champagne-gold); margin-bottom: 1rem;">Urgent Event Inquiries?</h3>
+      <p style="color: var(--color-blush); margin-bottom: 1.5rem;">For existing orders or events taking place within 7 days, our concierge phone line remains active.</p>
+      
+      <div style="display: flex; gap: 2rem; justify-content: center; font-weight: 600; flex-wrap: wrap;">
+        <div><i class="fa-solid fa-phone" style="color: var(--color-champagne-gold);"></i> +33 1 42 68 55 00</div>
+        <div><i class="fa-solid fa-envelope" style="color: var(--color-champagne-gold);"></i> concierge@ganachegallery.com</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: LIVE STATUS & FOOTER -->
+  <footer class="footer" style="background: #120D0C; border-top: 1px solid var(--border-gold);">
+    <div class="container text-center">
+      <p style="font-size: 0.85rem; color: var(--text-light);">&copy; 2026 Ganache Gallery Custom Desserts Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    let sec = 18;
+    setInterval(() => {
+      sec--;
+      if (sec < 0) sec = 59;
+      const secEl = document.getElementById('seconds');
+      if (secEl) secEl.textContent = sec < 10 ? '0' + sec : sec;
+    }, 1000);
+  </script>
+</body>
+</html>

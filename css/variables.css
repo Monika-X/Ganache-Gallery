@@ -1,0 +1,83 @@
+/* ==========================================================================
+   GANACHE GALLERY - LUXURY ATELIER DESIGN SYSTEM VARIABLES
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  /* Brand Palette - Light Mode */
+  --color-dark-cocoa: #351E1A;
+  --color-dark-cocoa-rgb: 53, 30, 26;
+  --color-espresso: #211614;
+  --color-espresso-rgb: 33, 22, 20;
+  --color-raspberry: #A83F5D;
+  --color-raspberry-hover: #8D324C;
+  --color-champagne-gold: #C9A86A;
+  --color-champagne-light: #F4EAD3;
+  --color-blush: #E8B7AE;
+  --color-blush-soft: #FBF4F2;
+  --color-vanilla: #FFF8EE;
+  --color-vanilla-pure: #FFFFFF;
+
+  /* Theme Dynamic Tokens */
+  --bg-primary: #FFF8EE;
+  --bg-secondary: #FDF5F3;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-glass: rgba(255, 248, 238, 0.85);
+  --bg-dark-accent: #351E1A;
+
+  --text-main: #211614;
+  --text-muted: #6B5550;
+  --text-light: #9E8984;
+  --text-inverse: #FFF8EE;
+
+  --border-light: rgba(53, 30, 26, 0.1);
+  --border-gold: rgba(201, 168, 106, 0.35);
+  --border-active: #C9A86A;
+
+  --shadow-sm: 0 4px 20px rgba(33, 22, 20, 0.04);
+  --shadow-md: 0 10px 30px rgba(33, 22, 20, 0.08);
+  --shadow-lg: 0 20px 40px rgba(33, 22, 20, 0.12);
+  --shadow-gold: 0 10px 30px rgba(201, 168, 106, 0.25);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing & Layout */
+  --header-height: 90px;
+  --header-shrink-height: 72px;
+  --container-max: 1320px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --bg-primary: #181110;
+  --bg-secondary: #211614;
+  --bg-surface: #281C1A;
+  --bg-surface-elevated: #322320;
+  --bg-glass: rgba(24, 17, 16, 0.88);
+  --bg-dark-accent: #120D0C;
+
+  --text-main: #FFF8EE;
+  --text-muted: #D1BEB8;
+  --text-light: #A08C86;
+  --text-inverse: #211614;
+
+  --border-light: rgba(232, 183, 174, 0.12);
+  --border-gold: rgba(201, 168, 106, 0.45);
+
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.7);
+}

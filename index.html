@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganache Gallery | Luxury Artisan Patisserie & Custom Dessert Atelier</title>
+  <meta name="description" content="Award-winning luxury cake studio and artisanal dessert atelier crafting bespoke wedding cakes, macarons, chocolate boxes, and grand celebration displays.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-logo-icon">
+          <i class="fa-solid fa-cake-candles"></i>
+        </div>
+        <div class="brand-title">Ganache <span>Gallery</span></div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="pages/home-2.html" class="nav-link">Home 2</a>
+        <a href="pages/about.html" class="nav-link">About Atelier</a>
+        <a href="pages/services.html" class="nav-link">Bespoke Services</a>
+        
+        <div class="nav-dropdown">
+          <a href="javascript:void(0)" class="nav-link">Collections <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.2rem;"></i></a>
+          <div class="dropdown-menu">
+            <a href="pages/services.html#signature-cakes" class="dropdown-item">Signature Cakes</a>
+            <a href="pages/services.html#celebration-cakes" class="dropdown-item">Celebration Cakes</a>
+            <a href="pages/services.html#cupcakes" class="dropdown-item">Artisan Cupcakes</a>
+            <a href="pages/services.html#dessert-jars" class="dropdown-item">Dessert Jars</a>
+            <a href="pages/services.html#chocolates" class="dropdown-item">Chocolate Boxes</a>
+            <a href="pages/services.html#macarons" class="dropdown-item">French Macarons</a>
+          </div>
+        </div>
+
+        <a href="pages/blog.html" class="nav-link">Journal</a>
+        <a href="pages/contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button class="icon-btn theme-toggle" title="Toggle Light/Dark Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- RTL/LTR Toggle Button -->
+        <button class="icon-btn rtl-toggle" title="Toggle Text Orientation">
+          <i class="fa-solid fa-language"></i>
+        </button>
+
+        <!-- Inquiry Consultation Bag Button -->
+        <a href="pages/contact.html#brief-builder" class="icon-btn" title="Consultation Inquiry">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-count">0</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <aside class="mobile-nav">
+    <div class="mobile-links">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="pages/home-2.html" class="mobile-link">Home 2 (Editorial)</a>
+      <a href="pages/about.html" class="mobile-link">About Atelier</a>
+      <a href="pages/services.html" class="mobile-link">Services & Collections</a>
+      <a href="pages/blog.html" class="mobile-link">Pastry Journal</a>
+      <a href="pages/contact.html" class="mobile-link">Contact & Bookings</a>
+      <a href="pages/sitemap.html" class="mobile-link">Sitemap</a>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="pages/contact.html#brief-builder" class="btn btn-gold" style="width: 100%;">Start Custom Brief</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       SECTION 1: HERO SLIDER
+       ========================================== -->
+  <section class="hero-slider-section">
+    <div class="hero-slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="slide-overlay"></div>
+        <div class="container slide-content">
+          <span class="tag-label">Artisan Patisserie & Haute Couture Desserts</span>
+          <h1 class="slide-title">Bespoke Architectural Cakes For Unforgettable Moments</h1>
+          <p class="slide-desc">Hand-sculpted sugar florals, single-origin Valrhona dark chocolate, and organic botanical infusions tailored for grand celebrations.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="pages/contact.html#brief-builder" class="btn btn-gold">Design Your Custom Cake <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="pages/services.html" class="btn btn-outline" style="color: #FFF8EE; border-color: rgba(255,248,238,0.4);">Explore Collections</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="slide-overlay"></div>
+        <div class="container slide-content">
+          <span class="tag-label">Grand Wedding Sculptures</span>
+          <h1 class="slide-title">The Art of Fine Pastry & Unrivaled Elegance</h1>
+          <p class="slide-desc">Crafting multi-tiered masterworks featuring edible gold leaf, delicate isomalt glasswork, and signature raspberry champagne preserves.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="pages/services.html#wedding-suite" class="btn btn-gold">Book Tasting Suite <i class="fa-solid fa-calendar-check"></i></a>
+            <a href="pages/about.html" class="btn btn-outline" style="color: #FFF8EE; border-color: rgba(255,248,238,0.4);">Chef's Philosophy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="slide-overlay"></div>
+        <div class="container slide-content">
+          <span class="tag-label">Gourmet French Macarons & Chocolates</span>
+          <h1 class="slide-title">Indulgent Artisan Treats & Custom Gift Boxes</h1>
+          <p class="slide-desc">Crisp almond shells filled with Tahitian vanilla bean buttercream, passionfruit curd, and pistachios from Bronte, Sicily.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="pages/services.html#macarons" class="btn btn-gold">Order Gift Sets <i class="fa-solid fa-gift"></i></a>
+            <a href="pages/blog.html" class="btn btn-outline" style="color: #FFF8EE; border-color: rgba(255,248,238,0.4);">Pastry Journal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Controls -->
+    <div class="slider-controls">
+      <button class="slider-btn prev" aria-label="Previous Slide"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="slider-btn next" aria-label="Next Slide"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <div class="slider-dots"></div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 2: PHILOSOPHY & HERITAGE
+       ========================================== -->
+  <section class="section-padding" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="reveal">
+          <span class="tag-label">Our Atelier Story</span>
+          <h2 class="section-title">Where Culinary Science Meets High-Fashion Design</h2>
+          <p>Founded by Master Pastry Chef Hélène Mercier, Ganache Gallery was established to redefine luxury dessert craftsmanship. We believe every cake should be a gallery-worthy centerpiece that tastes even more extraordinary than it looks.</p>
+          <p>Using rare origin chocolates, wild berries, and organic edible flora, our team spends up to 40 hours sculpting single custom creations for discerning clientele worldwide.</p>
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; border-top: 1px solid var(--border-light); padding-top: 2rem;">
+            <div>
+              <h3 style="font-size: 2.2rem; color: var(--color-raspberry);">14+</h3>
+              <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Years Excellence</p>
+            </div>
+            <div>
+              <h3 style="font-size: 2.2rem; color: var(--color-champagne-gold);">2,400+</h3>
+              <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Weddings Served</p>
+            </div>
+            <div>
+              <h3 style="font-size: 2.2rem; color: var(--color-dark-cocoa);">100%</h3>
+              <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Scratch-Made</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="position: relative;" class="reveal">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Master Pastry Chef decorating cake" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%;">
+          <div style="position: absolute; bottom: -1.5rem; left: -1.5rem; background: var(--bg-surface-elevated); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold); box-shadow: var(--shadow-md); max-width: 260px;">
+            <p style="font-family: var(--font-serif); font-style: italic; font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.5rem;">"Dessert is the final impression of a celebration—it must be pure poetry."</p>
+            <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-champagne-gold); text-transform: uppercase;">— Chef Hélène Mercier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 3: SIGNATURE CREATIONS SHOWCASE
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <span class="tag-label">Culinary Portfolio</span>
+        <h2 class="section-title">Signature Atelier Collections</h2>
+        <p class="section-subtitle">Browse our hand-curated selection of custom multi-tiered cakes, gourmet dessert jars, French macarons, and chocolate pralines.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active">All Creations</button>
+        <button class="filter-btn">Signature Cakes</button>
+        <button class="filter-btn">Celebration Tiers</button>
+        <button class="filter-btn">Dessert Jars</button>
+        <button class="filter-btn">French Macarons</button>
+        <button class="filter-btn">Chocolates</button>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="product-badge">Bestseller</span>
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" class="product-img" alt="The Grand Velvet Rose Cake">
+            <div class="product-overlay-actions">
+              <button class="icon-btn" onclick="addToInquiry('The Grand Velvet Rose Cake', 240)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
+              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Signature Cake</span>
+            <h3 class="product-title">The Grand Velvet Rose</h3>
+            <p class="product-desc">Dark chocolate sponge infused with Madagascar vanilla bean, layered with wild raspberry reduction and Swiss meringue buttercream.</p>
+            <div class="product-footer">
+              <div class="product-price">$240 <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">/ Serves 20</span></div>
+              <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;" onclick="addToInquiry('The Grand Velvet Rose Cake', 240)">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="product-badge" style="background: var(--color-champagne-gold); color: var(--color-espresso);">Custom Tier</span>
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Champagne Gold Botanical Tier">
+            <div class="product-overlay-actions">
+              <button class="icon-btn" onclick="addToInquiry('Champagne Gold Botanical Tier', 480)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
+              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Wedding Tier</span>
+            <h3 class="product-title">Champagne Gold Botanical</h3>
+            <p class="product-desc">3-tiered almond cake with edible 24k gold leaf accents, elderflower liqueur buttercream, and handcrafted sugar peony blossoms.</p>
+            <div class="product-footer">
+              <div class="product-price">$480 <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">/ Serves 45</span></div>
+              <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;" onclick="addToInquiry('Champagne Gold Botanical Tier', 480)">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="product-badge" style="background: var(--color-raspberry); color: #fff;">Artisan Box</span>
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Royal Macaron Coffret">
+            <div class="product-overlay-actions">
+              <button class="icon-btn" onclick="addToInquiry('Royal Macaron Coffret', 68)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
+              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+          <div class="product-content">
+            <span class="product-category">French Macarons</span>
+            <h3 class="product-title">Royal Macaron Coffret</h3>
+            <p class="product-desc">Box of 16 hand-painted French macarons: Pistachio Bronte, Salted Caramel Ganache, Lavender Honey, and Passionfruit Curd.</p>
+            <div class="product-footer">
+              <div class="product-price">$68 <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">/ 16 Pcs</span></div>
+              <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;" onclick="addToInquiry('Royal Macaron Coffret', 68)">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Espresso Praline Dessert Jars">
+            <div class="product-overlay-actions">
+              <button class="icon-btn" onclick="addToInquiry('Espresso Praline Dessert Jars', 55)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
+              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Dessert Jars</span>
+            <h3 class="product-title">Espresso Hazelnut Jars</h3>
+            <p class="product-desc">Individual glass atelier jars filled with hazelnut praline mousse, cold-brew espresso soak, and dark cocoa nib crunch.</p>
+            <div class="product-footer">
+              <div class="product-price">$55 <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">/ Pack of 6</span></div>
+              <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;" onclick="addToInquiry('Espresso Hazelnut Jars', 55)">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Valrhona Truffle Collection">
+            <div class="product-overlay-actions">
+              <button class="icon-btn" onclick="addToInquiry('Valrhona Truffle Collection', 85)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
+              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Chocolates</span>
+            <h3 class="product-title">Valrhona Truffle Box</h3>
+            <p class="product-desc">Hand-rolled single-origin dark chocolate bonbons infused with Cognac, Earl Grey, Tahitian Vanilla, and Smoked Sea Salt.</p>
+            <div class="product-footer">
+              <div class="product-price">$85 <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">/ 24 Truffles</span></div>
+              <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;" onclick="addToInquiry('Valrhona Truffle Box', 85)">Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="product-badge" style="background: var(--color-dark-cocoa);">New Arrival</span>
+            <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Wild Berry Floral Cupcakes">
+            <div class="product-overlay-actions">
+              <button class="icon-btn" onclick="addToInquiry('Wild Berry Floral Cupcakes', 60)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
+              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Cupcakes</span>
+            <h3 class="product-title">Wild Berry Flora Set</h3>
+            <p class="product-desc">Vanilla sponge filled with blackberry reduction, piped with multi-toned rose buttercream petals and edible silver leaf.</p>
+            <div class="product-footer">
+              <div class="product-price">$60 <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">/ Dozen</span></div>
+              <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem;" onclick="addToInquiry('Wild Berry Flora Set', 60)">Inquire</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 4: INTERACTIVE FLAVOR BUILDER
+       ========================================== -->
+  <section id="flavor-studio" class="section-padding" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center">
+        <span class="tag-label">Interactive Experience</span>
+        <h2 class="section-title">Flavors & Fillings Pairing Studio</h2>
+        <p class="section-subtitle">Select a sponge base and pairing filling to discover Chef Hélène's curated flavor profiles and tasting notes.</p>
+      </div>
+
+      <div class="flavor-studio">
+        <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">1. Select Sponge Base:</h3>
+        <div class="flavor-grid">
+          <div class="flavor-card sponge-card selected" data-name="Dark Belgian Chocolate" data-note="70% Valrhona dark chocolate sponge with rich cocoa depth.">
+            <i class="fa-solid fa-cookie flavor-icon"></i>
+            <h4 class="flavor-title">Dark Belgian Cocoa</h4>
+            <p class="flavor-notes">Rich 70% Valrhona ganache base with velvet crumb</p>
+          </div>
+          <div class="flavor-card sponge-card" data-name="Tahitian Vanilla Bean" data-note="Light butter sponge infused with hand-scraped Tahitian vanilla pods.">
+            <i class="fa-solid fa-seedling flavor-icon"></i>
+            <h4 class="flavor-title">Tahitian Vanilla Pod</h4>
+            <p class="flavor-notes">Delicate, floral, and aromatic crumb texture</p>
+          </div>
+          <div class="flavor-card sponge-card" data-name="Meyer Lemon Almond" data-note="Zesty Italian lemon oil paired with finely ground Bronte almonds.">
+            <i class="fa-solid fa-lemon flavor-icon"></i>
+            <h4 class="flavor-title">Meyer Lemon Almond</h4>
+            <p class="flavor-notes">Bright citrus zest with rich nutty moisture</p>
+          </div>
+          <div class="flavor-card sponge-card" data-name="Earl Grey & Lavender" data-note="Infused black tea sponge subtle floral top notes.">
+            <i class="fa-solid fa-mug-hot flavor-icon"></i>
+            <h4 class="flavor-title">Earl Grey Lavender</h4>
+            <p class="flavor-notes">Bergamot oil essence with French lavender bloom</p>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1.3rem; margin: 2rem 0 1rem 0;">2. Select Signature Filling:</h3>
+        <div class="flavor-grid">
+          <div class="flavor-card filling-card selected" data-name="Raspberry Rose Compote" data-note="Tart wild raspberries simmered with organic damask rose water.">
+            <i class="fa-solid fa-heart flavor-icon" style="color: var(--color-raspberry);"></i>
+            <h4 class="flavor-title">Raspberry Rose Compote</h4>
+            <p class="flavor-notes">Tart wild raspberries infused with organic rose water</p>
+          </div>
+          <div class="flavor-card filling-card" data-name="Salted Caramel Praline" data-note="Slow-cooked Breton salted caramel with caramelized hazelnut crunch.">
+            <i class="fa-solid fa-stroopwafel flavor-icon"></i>
+            <h4 class="flavor-title">Salted Caramel Praline</h4>
+            <p class="flavor-notes">Breton sea salt caramel with hazelnut crunch</p>
+          </div>
+          <div class="flavor-card filling-card" data-name="Passionfruit Mango Curd" data-note="Tropical passionfruit reduction with smooth creamy finish.">
+            <i class="fa-solid fa-sun flavor-icon"></i>
+            <h4 class="flavor-title">Passionfruit Curd</h4>
+            <p class="flavor-notes">Exotic tropical fruit reduction with bright acidity</p>
+          </div>
+          <div class="flavor-card filling-card" data-name="White Chocolate Champagne" data-note="Velvety white chocolate mousse spiked with Dom Pérignon.">
+            <i class="fa-solid fa-champagne-glasses flavor-icon"></i>
+            <h4 class="flavor-title">White Chocolate Champagne</h4>
+            <p class="flavor-notes">Silky mousse infused with vintage champagne</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2.5rem; padding: 2rem; background: var(--bg-surface); border-radius: var(--radius-md); border-left: 4px solid var(--color-champagne-gold);">
+          <h4 style="color: var(--color-champagne-gold); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Curated Pairing Profile</h4>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;"><span id="preview-sponge-name">Dark Belgian Chocolate</span> + <span id="preview-filling-name">Raspberry Rose Compote</span></h3>
+          <p id="preview-pairing-notes" style="color: var(--text-muted); font-size: 0.95rem;">A harmonious pairing: Rich 70% Valrhona ganache base combined with tart wild raspberries infused with organic damask rose water. Handcrafted with organic Madagascar vanilla bean syrup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 5: CUSTOM ORDER PROCESS & LEAD TIME
+       ========================================== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center">
+        <span class="tag-label">Simple & Seamless</span>
+        <h2 class="section-title">The Custom Order Journey</h2>
+        <p class="section-subtitle">We craft every custom dessert with precision. Here is how we turn your vision into an edible luxury masterpiece.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div style="background: var(--bg-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); text-align: center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-dark-cocoa); color: var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; margin: 0 auto 1.25rem auto;">1</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Design Brief</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Submit your event details, guest numbers, palette preferences, and inspirational moodboards.</p>
+        </div>
+
+        <div style="background: var(--bg-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); text-align: center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-dark-cocoa); color: var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; margin: 0 auto 1.25rem auto;">2</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Tasting Suite</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Schedule an in-studio champagne tasting session or order a luxury courier tasting box to your door.</p>
+        </div>
+
+        <div style="background: var(--bg-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); text-align: center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-dark-cocoa); color: var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; margin: 0 auto 1.25rem auto;">3</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Crafting & Sculpting</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Our master artisans handcraft your sponges, sugar flowers, and gold leaf decorations 24 hours prior.</p>
+        </div>
+
+        <div style="background: var(--bg-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); text-align: center;">
+          <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-dark-cocoa); color: var(--color-champagne-gold); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; margin: 0 auto 1.25rem auto;">4</div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Refrigerated Delivery</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">White-glove climate-controlled delivery & on-site assembly by our atelier setup specialists.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 6: PRESS ACCOLADES & REVIEWS
+       ========================================= -->
+  <section class="section-padding" style="background: var(--bg-dark-accent); color: var(--color-vanilla);">
+    <div class="container">
+      <div class="text-center">
+        <span class="tag-label" style="background: rgba(201, 168, 106, 0.2); color: var(--color-champagne-gold);">Press & Praise</span>
+        <h2 class="section-title" style="color: var(--color-vanilla);">Acclaimed By Connoisseurs</h2>
+        <p class="section-subtitle" style="color: var(--color-blush);">Read why top event planners and luxury publications call Ganache Gallery the gold standard in fine pastry.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <p style="font-style: italic; font-size: 1rem; color: var(--text-main); margin-bottom: 1.5rem;">"Ganache Gallery designed our 5-tier wedding cake for 200 guests. The sugar peony work was so realistic guests thought they were real! And the raspberry rose flavor was sheer perfection."</p>
+          <div class="author-wrap">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" class="author-avatar" alt="Victoria & Alexander">
+            <div>
+              <h4 style="font-size: 1rem;">Victoria & Alexander V.</h4>
+              <span style="font-size: 0.8rem; color: var(--color-champagne-gold);">Villa D'Este Wedding</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <p style="font-style: italic; font-size: 1rem; color: var(--text-main); margin-bottom: 1.5rem;">"The most exquisite dessert table in Paris. Chef Mercier's passionfruit macarons and chocolate bonbons elevated our corporate gala to an art exhibition."</p>
+          <div class="author-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" class="author-avatar" alt="Julian Sterling">
+            <div>
+              <h4 style="font-size: 1rem;">Julian Sterling</h4>
+              <span style="font-size: 0.8rem; color: var(--color-champagne-gold);">Vogue International Events</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <p style="font-style: italic; font-size: 1rem; color: var(--text-main); margin-bottom: 1.5rem;">"Not only are the cakes visual sculptures, but the flavor depth with 70% Valrhona cocoa and organic berries is unmatched in the industry."</p>
+          <div class="author-wrap">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" class="author-avatar" alt="Camille Laurent">
+            <div>
+              <h4 style="font-size: 1rem;">Camille Laurent</h4>
+              <span style="font-size: 0.8rem; color: var(--color-champagne-gold);">Michelin Guide Reviewer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
+            <div class="brand-title" style="color: #fff;">Ganache <span>Gallery</span></div>
+          </div>
+          <p style="color: var(--color-blush); font-size: 0.9rem; margin-bottom: 1.5rem;">An award-winning luxury cake studio & artisanal dessert atelier. Crafting bespoke culinary sculptures for weddings, galas, and private celebrations worldwide.</p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="javascript:void(0)" class="icon-btn" style="background: rgba(255,255,255,0.1); color: #fff;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="icon-btn" style="background: rgba(255,255,255,0.1); color: #fff;"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="javascript:void(0)" class="icon-btn" style="background: rgba(255,255,255,0.1); color: #fff;"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home Studio</a>
+            <a href="pages/home-2.html">Editorial Showcase</a>
+            <a href="pages/about.html">Our Heritage</a>
+            <a href="pages/services.html">Bespoke Services</a>
+            <a href="pages/blog.html">Pastry Journal</a>
+            <a href="pages/contact.html">Studio Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <div class="footer-links">
+            <a href="pages/services.html#signature-cakes">Signature Cakes</a>
+            <a href="pages/services.html#wedding-suite">Wedding Tiers</a>
+            <a href="pages/services.html#cupcakes">Artisan Cupcakes</a>
+            <a href="pages/services.html#dessert-jars">Dessert Jars</a>
+            <a href="pages/services.html#macarons">French Macarons</a>
+            <a href="pages/services.html#chocolates">Valrhona Chocolates</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atelier Details</h4>
+          <p style="font-size: 0.88rem; color: var(--color-blush);"><i class="fa-solid fa-location-dot" style="color: var(--color-champagne-gold); margin-right: 0.5rem;"></i> 742 Faubourg Saint-Honoré, Paris</p>
+          <p style="font-size: 0.88rem; color: var(--color-blush);"><i class="fa-solid fa-phone" style="color: var(--color-champagne-gold); margin-right: 0.5rem;"></i> +33 1 42 68 55 00</p>
+          <p style="font-size: 0.88rem; color: var(--color-blush);"><i class="fa-solid fa-envelope" style="color: var(--color-champagne-gold); margin-right: 0.5rem;"></i> concierge@ganachegallery.com</p>
+          <div style="margin-top: 1rem;">
+            <a href="pages/sitemap.html" style="color: var(--color-champagne-gold); font-size: 0.85rem; text-decoration: underline;">View HTML Sitemap</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ganache Gallery Custom Desserts Studio. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="pages/privacy-policy.html">Privacy Policy</a>
+          <a href="pages/terms-and-conditions.html">Terms & Conditions</a>
+          <a href="pages/maintenance.html">Maintenance Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/cake-builder.js"></script>
+</body>
+</html>
