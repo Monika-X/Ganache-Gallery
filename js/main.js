@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initBackToTop();
   initInquiryDrawer();
+  initBlogPagination();
+  initIndexPortfolioFilter();
 });
 
 /* --------------------------------------------------------------------------
@@ -57,6 +59,7 @@ function initDirection() {
   const savedDir = localStorage.getItem('ganache_dir') || 'ltr';
 
   document.documentElement.setAttribute('dir', savedDir);
+  updateRtlToggleText(savedDir);
 
   rtlToggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -65,8 +68,16 @@ function initDirection() {
       
       document.documentElement.setAttribute('dir', newDir);
       localStorage.setItem('ganache_dir', newDir);
+      updateRtlToggleText(newDir);
       showToast(`Layout orientation: ${newDir.toUpperCase()}`);
     });
+  });
+}
+
+function updateRtlToggleText(dir) {
+  const rtlToggleBtns = document.querySelectorAll('.rtl-toggle');
+  rtlToggleBtns.forEach(btn => {
+    btn.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
   });
 }
 
@@ -335,4 +346,141 @@ function showToast(message) {
     toast.style.transform = 'translateY(20px)';
     setTimeout(() => toast.remove(), 400);
   }, 3500);
+}
+
+/* --------------------------------------------------------------------------
+   11. BLOG PAGE CARDS PAGINATION, CATEGORY FILTERING & LIVE SEARCH
+   -------------------------------------------------------------------------- */
+function initBlogPagination() {
+  const cards = document.querySelectorAll('.blog-card-item');
+  const filterBtns = document.querySelectorAll('.filter-bar .filter-btn');
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const loadMoreWrap = document.getElementById('load-more-wrap');
+  const searchInput = document.getElementById('blog-search-input');
+  const noResultsMsg = document.getElementById('no-search-results');
+
+  if (!cards.length) return;
+
+  const BATCH_SIZE = 3;
+  let currentFilter = 'all';
+  let currentlyShown = 3;
+  let searchQuery = '';
+
+  function renderGrid() {
+    // 1. Filter cards by search query first
+    const searchMatchingCards = Array.from(cards).filter(card => {
+      if (!searchQuery) return true;
+      const text = card.textContent.toLowerCase();
+      return text.includes(searchQuery.toLowerCase());
+    });
+
+    // 2. Hide all cards
+    cards.forEach(card => card.style.display = 'none');
+
+    if (searchQuery) {
+      // When searching, show all cards matching search query
+      searchMatchingCards.forEach(card => {
+        card.style.display = '';
+      });
+
+      if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+      if (noResultsMsg) {
+        noResultsMsg.style.display = searchMatchingCards.length === 0 ? 'block' : 'none';
+      }
+    } else {
+      // When not searching, apply active category filter & pagination
+      if (noResultsMsg) noResultsMsg.style.display = 'none';
+
+      const categoryMatchingCards = searchMatchingCards.filter(card => {
+        const cat = card.getAttribute('data-category');
+        return currentFilter === 'all' || cat === currentFilter;
+      });
+
+      categoryMatchingCards.forEach((card, index) => {
+        if (currentFilter === 'all') {
+          if (index < currentlyShown) {
+            card.style.display = '';
+          }
+        } else {
+          card.style.display = '';
+        }
+      });
+
+      if (loadMoreWrap) {
+        if (currentFilter === 'all' && currentlyShown < categoryMatchingCards.length) {
+          loadMoreWrap.style.display = '';
+        } else {
+          loadMoreWrap.style.display = 'none';
+        }
+      }
+    }
+  }
+
+  // Initial render
+  renderGrid();
+
+  // Search input live listener
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim();
+      renderGrid();
+    });
+  }
+
+  // Category Filter Button Clicks
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      currentFilter = btn.getAttribute('data-filter') || 'all';
+      currentlyShown = 3;
+      if (searchInput) {
+        searchInput.value = '';
+        searchQuery = '';
+      }
+      renderGrid();
+    });
+  });
+
+  // Load More Button Click (for 'all' filter)
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      currentlyShown += BATCH_SIZE;
+      renderGrid();
+    });
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. INDEX PAGE PORTFOLIO FILTERING
+   -------------------------------------------------------------------------- */
+function initIndexPortfolioFilter() {
+  const grid = document.querySelector('.product-grid');
+  if (!grid) return;
+
+  const filterBar = grid.previousElementSibling;
+  if (!filterBar || !filterBar.classList.contains('filter-bar')) return;
+
+  const filterBtns = filterBar.querySelectorAll('.filter-btn');
+  const cards = grid.querySelectorAll('.product-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter') || 'all';
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = '';
+          card.style.animation = 'fadeInUp 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
 }

@@ -17,7 +17,10 @@
     <div class="container header-container">
       <a href="../index.html" class="brand-logo">
         <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
-        <div class="brand-title">Ganache <span>Gallery</span></div>
+        <div class="brand-text">
+          <div class="brand-title">Ganache <span>Gallery</span></div>
+          <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
+        </div>
       </a>
 
       <nav class="nav-menu">
@@ -25,27 +28,13 @@
         <a href="home-2.html" class="nav-link active">Home 2</a>
         <a href="about.html" class="nav-link">About Atelier</a>
         <a href="services.html" class="nav-link">Bespoke Services</a>
-        
-        <div class="nav-dropdown">
-          <a href="javascript:void(0)" class="nav-link">Collections <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
-          <div class="dropdown-menu">
-            <a href="services.html#signature-cakes" class="dropdown-item">Signature Cakes</a>
-            <a href="services.html#celebration-cakes" class="dropdown-item">Celebration Cakes</a>
-            <a href="services.html#cupcakes" class="dropdown-item">Artisan Cupcakes</a>
-            <a href="services.html#dessert-jars" class="dropdown-item">Dessert Jars</a>
-            <a href="services.html#chocolates" class="dropdown-item">Chocolate Boxes</a>
-            <a href="services.html#macarons" class="dropdown-item">French Macarons</a>
-          </div>
-        </div>
-
         <a href="blog.html" class="nav-link">Journal</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="header-actions">
         <button class="icon-btn theme-toggle" title="Toggle Light/Dark Mode"><i class="fa-solid fa-moon"></i></button>
-        <button class="icon-btn rtl-toggle" title="Toggle Text Orientation"><i class="fa-solid fa-language"></i></button>
-        <a href="contact.html#brief-builder" class="icon-btn" title="Consultation Inquiry"><i class="fa-solid fa-bag-shopping"></i><span class="badge-count">0</span></a>
+        <button class="rtl-toggle-btn rtl-toggle" title="Toggle Text Orientation">RTL</button>
         <div class="hamburger"><span></span><span></span><span></span></div>
       </div>
     </div>
@@ -92,7 +81,7 @@
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
         <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=800&q=80" alt="Minimalist Wafer Paper Tier" style="width: 100%; height: 320px; object-fit: cover;">
+          <img src="https://i.pinimg.com/736x/f2/c7/1b/f2c71b213f5698f1f15520083a699383.jpg" alt="Minimalist Wafer Paper Tier" style="width: 100%; height: 320px; object-fit: cover;">
           <div style="padding: 2rem;">
             <span style="color: var(--color-champagne-gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Wafer Paper Art</span>
             <h3 style="font-size: 1.4rem; margin: 0.35rem 0 0.75rem 0;">The Ivory Monolith</h3>
@@ -105,7 +94,7 @@
         </div>
 
         <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" alt="Isomalt Glasswork Tier" style="width: 100%; height: 320px; object-fit: cover;">
+          <img src="https://i.pinimg.com/736x/c5/89/ea/c589ea1e37031d4abe2a6b8b9b53b1a2.jpg" alt="Isomalt Glasswork Tier" style="width: 100%; height: 320px; object-fit: cover;">
           <div style="padding: 2rem;">
             <span style="color: var(--color-champagne-gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Isomalt Glass Art</span>
             <h3 style="font-size: 1.4rem; margin: 0.35rem 0 0.75rem 0;">Celestial Amber Glass</h3>
@@ -118,7 +107,7 @@
         </div>
 
         <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);">
-          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Bas-Relief Sculpted Tier" style="width: 100%; height: 320px; object-fit: cover;">
+          <img src="https://i.pinimg.com/1200x/e2/42/ef/e242ef8ec92be0d8e80665c389c5d87f.jpg" alt="Bas-Relief Sculpted Tier" style="width: 100%; height: 320px; object-fit: cover;">
           <div style="padding: 2rem;">
             <span style="color: var(--color-champagne-gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Sculpted Bas-Relief</span>
             <h3 style="font-size: 1.4rem; margin: 0.35rem 0 0.75rem 0;">Baroque Sugar Garden</h3>
@@ -259,51 +248,67 @@
       </div>
 
       <div class="gallery-grid" style="margin-top: 3rem;">
-        <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" alt="Château de Chantilly Wedding">
+        <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/e2/c6/fe/e2c6fea81cc493d9592509debe56017b.jpg">
+          <img src="https://i.pinimg.com/736x/e2/c6/fe/e2c6fea81cc493d9592509debe56017b.jpg" alt="Château de Chantilly Wedding">
           <div class="gallery-overlay">
             <h4 style="color: #fff; font-size: 1.1rem;">Château de Chantilly Wedding</h4>
             <span style="color: var(--color-champagne-gold); font-size: 0.8rem;">5-Tier Sugar Rose Sculpture</span>
           </div>
         </div>
 
-        <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80" alt="Paris Fashion Week Gala Dessert Table">
+        <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/f8/af/2c/f8af2c51670c2707d7866b9dbffce0df.jpg">
+          <img src="https://i.pinimg.com/736x/f8/af/2c/f8af2c51670c2707d7866b9dbffce0df.jpg" alt="Paris Fashion Week Gala Dessert Table">
           <div class="gallery-overlay">
             <h4 style="color: #fff; font-size: 1.1rem;">Paris Fashion Week Gala</h4>
             <span style="color: var(--color-champagne-gold); font-size: 0.8rem;">Gold Leaf Macaron Tower</span>
           </div>
         </div>
 
-        <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" alt="Amalfi Coast Sunset Reception">
+        <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/db/14/01/db1401c175bce21dd6498703f29eccb3.jpg">
+          <img src="https://i.pinimg.com/736x/db/14/01/db1401c175bce21dd6498703f29eccb3.jpg" alt="Amalfi Coast Sunset Reception">
           <div class="gallery-overlay">
             <h4 style="color: #fff; font-size: 1.1rem;">Amalfi Coast Reception</h4>
             <span style="color: var(--color-champagne-gold); font-size: 0.8rem;">Meyer Lemon & Botanical Tier</span>
           </div>
         </div>
 
-        <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Milestone 50th Birthday Party">
+        <div class="gallery-item" data-lightbox="https://i.pinimg.com/1200x/d1/28/ca/d128cac36da59b68f5a24428167ef706.jpg">
+          <img src="https://i.pinimg.com/1200x/d1/28/ca/d128cac36da59b68f5a24428167ef706.jpg" alt="Milestone 50th Birthday Party">
           <div class="gallery-overlay">
             <h4 style="color: #fff; font-size: 1.1rem;">Milestone 50th Gala</h4>
             <span style="color: var(--color-champagne-gold); font-size: 0.8rem;">Espresso Praline Dessert Jars</span>
           </div>
         </div>
 
-        <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" alt="Monaco Yacht Club Reception">
+        <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/81/4b/73/814b73b298e350f115d98d722c5970ce.jpg">
+          <img src="https://i.pinimg.com/736x/81/4b/73/814b73b298e350f115d98d722c5970ce.jpg" alt="Monaco Yacht Club Reception">
           <div class="gallery-overlay">
             <h4 style="color: #fff; font-size: 1.1rem;">Monaco Yacht Club</h4>
             <span style="color: var(--color-champagne-gold); font-size: 0.8rem;">Valrhona Chocolate Bonbon Bar</span>
           </div>
         </div>
 
-        <div class="gallery-item" data-lightbox="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=1200&q=80">
-          <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=600&q=80" alt="Ritz Paris Garden Party">
+        <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/ae/ad/ff/aeadff64c432755e20f2a9a6c291ed23.jpg">
+          <img src="https://i.pinimg.com/736x/ae/ad/ff/aeadff64c432755e20f2a9a6c291ed23.jpg" alt="Ritz Paris Garden Party">
           <div class="gallery-overlay">
             <h4 style="color: #fff; font-size: 1.1rem;">Ritz Paris Garden Party</h4>
             <span style="color: var(--color-champagne-gold); font-size: 0.8rem;">Wild Berry Floral Cupcakes</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/d2/5a/29/d25a292c95f0af1aa0043e99fe803153.jpg">
+          <img src="https://i.pinimg.com/736x/d2/5a/29/d25a292c95f0af1aa0043e99fe803153.jpg" alt="Grand Lake Como Soirée">
+          <div class="gallery-overlay">
+            <h4 style="color: #fff; font-size: 1.1rem;">Grand Lake Como Soirée</h4>
+            <span style="color: var(--color-champagne-gold); font-size: 0.8rem;">Architectural Bas-Relief Tier</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-lightbox="https://i.pinimg.com/736x/3d/76/13/3d7613db0264e2a3bbbd9dacc8ec4464.jpg">
+          <img src="https://i.pinimg.com/736x/3d/76/13/3d7613db0264e2a3bbbd9dacc8ec4464.jpg" alt="Versailles Palace Ball" style="object-position: center top;">
+          <div class="gallery-overlay">
+            <h4 style="color: #fff; font-size: 1.1rem;">Versailles Palace Ball</h4>
+            <span style="color: var(--color-champagne-gold); font-size: 0.8rem;">Haute Couture Croquembouche</span>
           </div>
         </div>
       </div>
@@ -323,21 +328,21 @@
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
         <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; text-align: center;">
-          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=80" alt="Chef Hélène Mercier" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 3px solid var(--color-champagne-gold);">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Chef Hélène Mercier" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 3px solid var(--color-champagne-gold);">
           <h3 style="font-size: 1.3rem;">Hélène Mercier</h3>
           <span style="color: var(--color-champagne-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Founder & Executive Chef</span>
           <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 1rem;">Trained at École Grégoire-Ferrandi Paris. Winner of the World Pastry Championship 2021.</p>
         </div>
 
         <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; text-align: center;">
-          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=400&q=80" alt="Antoine Dubois" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 3px solid var(--color-champagne-gold);">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=80" alt="Antoine Dubois" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 3px solid var(--color-champagne-gold);">
           <h3 style="font-size: 1.3rem;">Antoine Dubois</h3>
           <span style="color: var(--color-champagne-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Head Chocolatier & Pralinier</span>
           <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 1rem;">Former Valrhona Master Artisan specializing in single-origin bean tempering and liqueur infusion.</p>
         </div>
 
         <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; text-align: center;">
-          <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=400&q=80" alt="Sophie Laurent" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 3px solid var(--color-champagne-gold);">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Sophie Laurent" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem auto; border: 3px solid var(--color-champagne-gold);">
           <h3 style="font-size: 1.3rem;">Sophie Laurent</h3>
           <span style="color: var(--color-champagne-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Lead Sugar Botanist & Sculptor</span>
           <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 1rem;">Sculpts botanically accurate gum paste flowers, roses, peonies, and isomalt glass sculptures.</p>
@@ -350,46 +355,77 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+        <!-- Col 1: Brand Info & Social -->
+        <div class="footer-col brand-col">
           <div class="brand-logo" style="margin-bottom: 1.25rem;">
             <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
-            <div class="brand-title" style="color: #fff;">Ganache <span>Gallery</span></div>
+            <div class="brand-text">
+              <div class="brand-title" style="color: #fff;">Ganache <span>Gallery</span></div>
+              <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
+            </div>
           </div>
-          <p style="color: var(--color-blush); font-size: 0.9rem;">High-fashion custom cake design studio and tasting parlor.</p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <div class="footer-links">
-            <a href="../index.html">Home Studio</a>
-            <a href="home-2.html">Editorial Showcase</a>
-            <a href="about.html">Our Heritage</a>
-            <a href="services.html">Services & Collections</a>
-            <a href="blog.html">Pastry Journal</a>
-            <a href="contact.html">Studio Contact</a>
+          <p class="footer-desc">An award-winning luxury cake studio & artisanal dessert atelier. Crafting bespoke culinary sculptures for weddings, galas, and private celebrations worldwide.</p>
+          <div class="footer-socials">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
 
+        <!-- Col 2: Collections -->
         <div class="footer-col">
-          <h4>Collections</h4>
-          <div class="footer-links">
-            <a href="services.html#signature-cakes">Signature Cakes</a>
-            <a href="services.html#wedding-suite">Wedding Tiers</a>
-            <a href="services.html#macarons">French Macarons</a>
-          </div>
+          <h4 class="footer-col-title">Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#signature-cakes">Signature Cakes</a></li>
+            <li><a href="services.html#wedding-suite">Wedding Tiers</a></li>
+            <li><a href="services.html#cupcakes">Artisan Cupcakes</a></li>
+            <li><a href="services.html#dessert-jars">Dessert Jars</a></li>
+            <li><a href="services.html#macarons">French Macarons</a></li>
+            <li><a href="services.html#chocolates">Valrhona Chocolates</a></li>
+          </ul>
         </div>
 
+        <!-- Col 3: Atelier / Navigation -->
         <div class="footer-col">
-          <h4>Studio Concierge</h4>
-          <p style="font-size: 0.88rem; color: var(--color-blush);"><i class="fa-solid fa-envelope" style="color: var(--color-champagne-gold);"></i> concierge@ganachegallery.com</p>
+          <h4 class="footer-col-title">Atelier</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col newsletter-col">
+          <h4 class="footer-col-title">The Private List</h4>
+          <p class="footer-newsletter-desc">Receive exclusive previews, private tasting invitations, and seasonal pastry insights before anyone else.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to The Private List!');">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">JOIN</button>
+          </form>
         </div>
       </div>
 
+      <!-- Divider line with central badge dot -->
+      <div class="footer-divider-wrap">
+        <div class="footer-divider-line"></div>
+        <div class="footer-divider-badge">
+          <span class="badge-dot"></span>
+        </div>
+        <div class="footer-divider-line"></div>
+      </div>
+
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <div>&copy; 2026 Ganache Gallery Custom Desserts Studio. All rights reserved.</div>
-        <div style="display: flex; gap: 1.5rem;">
+        <div class="copyright-text">&copy; 2026 Ganache Gallery. All rights reserved. Established 2012, Paris.</div>
+        <div class="footer-bottom-links">
           <a href="privacy-policy.html">Privacy Policy</a>
           <a href="terms-and-conditions.html">Terms & Conditions</a>
+          <a href="sitemap.html">Sitemap</a>
         </div>
       </div>
     </div>

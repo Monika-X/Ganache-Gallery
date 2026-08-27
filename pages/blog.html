@@ -17,7 +17,10 @@
     <div class="container header-container">
       <a href="../index.html" class="brand-logo">
         <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
-        <div class="brand-title">Ganache <span>Gallery</span></div>
+        <div class="brand-text">
+          <div class="brand-title">Ganache <span>Gallery</span></div>
+          <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
+        </div>
       </a>
 
       <nav class="nav-menu">
@@ -25,24 +28,13 @@
         <a href="home-2.html" class="nav-link">Home 2</a>
         <a href="about.html" class="nav-link">About Atelier</a>
         <a href="services.html" class="nav-link">Bespoke Services</a>
-        
-        <div class="nav-dropdown">
-          <a href="javascript:void(0)" class="nav-link">Collections <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
-          <div class="dropdown-menu">
-            <a href="services.html#signature-cakes" class="dropdown-item">Signature Cakes</a>
-            <a href="services.html#wedding-suite" class="dropdown-item">Wedding Tiers</a>
-            <a href="services.html#macarons" class="dropdown-item">French Macarons</a>
-          </div>
-        </div>
-
         <a href="blog.html" class="nav-link active">Journal</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="header-actions">
         <button class="icon-btn theme-toggle" title="Toggle Light/Dark Mode"><i class="fa-solid fa-moon"></i></button>
-        <button class="icon-btn rtl-toggle" title="Toggle Text Orientation"><i class="fa-solid fa-language"></i></button>
-        <a href="contact.html#brief-builder" class="icon-btn" title="Consultation Inquiry"><i class="fa-solid fa-bag-shopping"></i><span class="badge-count">0</span></a>
+        <button class="rtl-toggle-btn rtl-toggle" title="Toggle Text Orientation">RTL</button>
         <div class="hamburger"><span></span><span></span><span></span></div>
       </div>
     </div>
@@ -72,29 +64,11 @@
     </div>
   </section>
 
-  <!-- SECTION 1: SEARCH & CATEGORY FILTER -->
+  <!-- SECTION 1: FEATURED SPOTLIGHT ARTICLE -->
   <section class="section-padding" style="padding-bottom: 2rem;">
-    <div class="container text-center">
-      <div style="max-width: 550px; margin: 0 auto 2rem auto; position: relative;">
-        <input type="text" class="form-control" placeholder="Search baking science, trends, or recipes..." style="padding-left: 3rem; border-radius: var(--radius-full);">
-        <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--color-champagne-gold);"></i>
-      </div>
-
-      <div class="filter-bar">
-        <button class="filter-btn active">All Articles</button>
-        <button class="filter-btn">Wedding Trends</button>
-        <button class="filter-btn">Pastry Science</button>
-        <button class="filter-btn">Behind The Scenes</button>
-        <button class="filter-btn">Flavor Pairings</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 2: FEATURED SPOTLIGHT ARTICLE -->
-  <section class="section-padding" style="padding-top: 0;">
     <div class="container">
       <article style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); display: grid; grid-template-columns: 1.2fr 1fr; gap: 0;">
-        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=80" alt="Master Ganache Ratios" style="width: 100%; height: 100%; object-fit: cover; min-height: 380px;">
+        <img src="https://i.pinimg.com/736x/48/94/31/489431977cb5634358619db4c8de3355.jpg" alt="Master Ganache Ratios" style="width: 100%; height: 350px; object-fit: cover; object-position: center;">
         
         <div style="padding: 3rem; display: flex; flex-direction: column; justify-content: center;">
           <span style="color: var(--color-raspberry); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Featured Masterclass</span>
@@ -103,7 +77,7 @@
           
           <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
             <div style="display: flex; align-items: center; gap: 0.75rem;">
-              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=100&q=80" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" alt="Chef Hélène">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" alt="Chef Hélène">
               <div>
                 <h4 style="font-size: 0.88rem;">Chef Hélène Mercier</h4>
                 <span style="font-size: 0.75rem; color: var(--text-light);">August 24, 2026 • 8 Min Read</span>
@@ -116,19 +90,34 @@
     </div>
   </section>
 
-  <!-- SECTION 3: WEDDING & DESIGN TRENDS GRID -->
+  <!-- SECTION 2: WEDDING & DESIGN TRENDS GRID & FILTER -->
   <section class="section-padding" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="text-center">
         <span class="tag-label">Trend Report</span>
         <h2 class="section-title">2026 Haute Couture Cake Trends</h2>
         <p class="section-subtitle">Discover the emerging aesthetics defining modern high-society celebrations this season.</p>
+
+        <!-- Search & Filter Bar below heading -->
+        <div style="max-width: 550px; margin: 2.5rem auto 1.5rem auto; position: relative;">
+          <input type="text" class="form-control" id="blog-search-input" placeholder="Search baking science, trends, or recipes..." style="padding-left: 3rem; border-radius: var(--radius-full);">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--color-champagne-gold);"></i>
+        </div>
+
+        <div class="filter-bar" style="margin-bottom: 3rem;">
+          <button class="filter-btn active" data-filter="all">All Articles</button>
+          <button class="filter-btn" data-filter="wedding-trends">Wedding Trends</button>
+          <button class="filter-btn" data-filter="pastry-science">Pastry Science</button>
+          <button class="filter-btn" data-filter="behind-the-scenes">Behind The Scenes</button>
+          <button class="filter-btn" data-filter="flavor-pairings">Flavor Pairings</button>
+        </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
-        <article class="product-card">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem;">
+        <!-- Card 1 -->
+        <article class="product-card blog-card-item" data-category="wedding-trends">
           <div class="product-img-wrap">
-            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" alt="Wafer Paper Veil Trend" class="product-img">
+            <img src="https://i.pinimg.com/736x/5a/dd/69/5add69e391fe0d6490a3f78d930a590d.jpg" alt="Translucent Wafer Paper Veils" class="product-img">
           </div>
           <div class="product-content">
             <span class="product-category">Wedding Design</span>
@@ -141,9 +130,10 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <!-- Card 2 -->
+        <article class="product-card blog-card-item" data-category="pastry-science">
           <div class="product-img-wrap">
-            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" alt="Isomalt Glass Art" class="product-img">
+            <img src="https://i.pinimg.com/736x/ea/ae/2e/eaae2e37b44fb90830c54e9440ca6ca4.jpg" alt="Sculpted Isomalt Glass Crystals" class="product-img">
           </div>
           <div class="product-content">
             <span class="product-category">Sugar Art</span>
@@ -156,9 +146,10 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <!-- Card 3 -->
+        <article class="product-card blog-card-item" data-category="behind-the-scenes">
           <div class="product-img-wrap">
-            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80" alt="Individual Dessert Towers" class="product-img">
+            <img src="https://i.pinimg.com/1200x/43/6c/b5/436cb53d21ba31ab3eaa183337359653.jpg" alt="Individual VIP Mini-Tasting Towers" class="product-img">
           </div>
           <div class="product-content">
             <span class="product-category">Event Styling</span>
@@ -170,6 +161,163 @@
             </div>
           </div>
         </article>
+
+        <!-- Card 4 -->
+        <article class="product-card blog-card-item" data-category="pastry-science">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/1200x/0b/42/d8/0b42d88a11f5f8a9ef5b0f095a87ff4e.jpg" alt="Beta-V Crystal Tempering Curves" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Chocolate Science</span>
+            <h3 class="product-title"><a href="blog-details.html">Beta-V Crystal Tempering Curves</a></h3>
+            <p class="product-desc">How precise thermal manipulation of Valrhona cocoa butter creates high-gloss snap and velvet mouthfeel.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">8 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="product-card blog-card-item" data-category="pastry-science">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/736x/11/d6/00/11d600393905b163bad7117bd8fbf22d.jpg" alt="Swiss vs Italian Meringue Stability" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Buttercream Science</span>
+            <h3 class="product-title"><a href="blog-details.html">Swiss vs Italian Meringue Stability</a></h3>
+            <p class="product-desc">Choosing the ideal protein-to-sugar ratio for high-humidity outdoor venues and summer garden receptions.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">6 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="product-card blog-card-item" data-category="flavor-pairings">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/736x/ee/07/cb/ee07cb42ea0aee080e611614a06c4a8e.jpg" alt="Tahitian Vanilla & Wild Lavender" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Flavor Pairings</span>
+            <h3 class="product-title"><a href="blog-details.html">Tahitian Vanilla & Wild Lavender</a></h3>
+            <p class="product-desc">Balancing floral botanical notes with dark Single-Origin Madagascar vanilla bean buttercream layers.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">4 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="product-card blog-card-item" data-category="wedding-trends">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/736x/9c/03/9f/9c039f28687cab2a1bfc7812d45c35fc.jpg" alt="Royal Icing Architectural Bas-Relief" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Signature Cakes</span>
+            <h3 class="product-title"><a href="blog-details.html">Royal Icing Architectural Bas-Relief</a></h3>
+            <p class="product-desc">Architectural cake detailing techniques inspired by 18th-century French palace moldings and motifs.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">9 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="product-card blog-card-item" data-category="flavor-pairings">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/1200x/62/a5/79/62a5796173bbbb8a6211f7863407a6b4.jpg" alt="Edible 24k Gold Leaf Macaron Shells" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">French Macarons</span>
+            <h3 class="product-title"><a href="blog-details.html">Edible 24k Gold Leaf Macaron Shells</a></h3>
+            <p class="product-desc">Piping pristine almond meringues infused with Bronte pistachio ganache and hand-applied gold leaf.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">5 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="product-card blog-card-item" data-category="flavor-pairings">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/1200x/7f/8d/72/7f8d72b92812aae0519d4f578dbfeded.jpg" alt="Cold-Brew Espresso Praline Mousse" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Dessert Jars</span>
+            <h3 class="product-title"><a href="blog-details.html">Cold-Brew Espresso Praline Mousse</a></h3>
+            <p class="product-desc">Layering slow-steeped espresso gelée with hazelnut praline crunch in individual glass atelier jars.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">6 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 10 -->
+        <article class="product-card blog-card-item" data-category="behind-the-scenes">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/1200x/ff/d2/1e/ffd21eb5dee164e02f7026fcfb278f31.jpg" alt="Structuring Grand Gala Macaron Towers" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Gala Catering</span>
+            <h3 class="product-title"><a href="blog-details.html">Structuring Grand Gala Macaron Towers</a></h3>
+            <p class="product-desc">Engineering internal acrylic support tiers for multi-tiered croquembouche and macaron pyramids.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">7 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 11 -->
+        <article class="product-card blog-card-item" data-category="wedding-trends">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/1200x/08/42/be/0842be096c9e8e8f243deb9eae924f67.jpg" alt="Meyer Lemon & Elderflower Infusions" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Botanical Flavors</span>
+            <h3 class="product-title"><a href="blog-details.html">Meyer Lemon & Elderflower Infusions</a></h3>
+            <p class="product-desc">Combining bright Amalfi citrus curd with organic French elderflower liqueur preserve fillings.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">5 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 12 -->
+        <article class="product-card blog-card-item" data-category="behind-the-scenes">
+          <div class="product-img-wrap">
+            <img src="https://i.pinimg.com/736x/47/56/75/47567530ad926b52eacd33fe33566c8a.jpg" alt="Ecuador Arriba Cacao Plantation Tour" class="product-img">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Behind The Scenes</span>
+            <h3 class="product-title"><a href="blog-details.html">Ecuador Arriba Cacao Plantation Tour</a></h3>
+            <p class="product-desc">Chef Hélène’s travel log from direct trade cocoa farms in Esmeraldas specializing in shade-grown pods.</p>
+            <div class="product-footer">
+              <span style="font-size: 0.8rem; color: var(--text-light);">8 Min Read</span>
+              <a href="blog-details.html" style="color: var(--color-champagne-gold); font-weight: 700; font-size: 0.88rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-search-results" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+        <i class="fa-solid fa-magnifying-glass" style="font-size: 2.5rem; color: var(--color-champagne-gold); margin-bottom: 1rem;"></i>
+        <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--text-main);">No Articles Found</h3>
+        <p style="color: var(--text-muted);">Try searching for terms like "Ganache", "Vanilla", "Wafer", "Meringue", or "Ecuador".</p>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center" style="margin-top: 3.5rem;" id="load-more-wrap">
+        <button class="btn btn-outline" id="load-more-btn" style="padding: 0.8rem 2.5rem; font-size: 0.95rem;">
+          View More Articles <i class="fa-solid fa-chevron-down" style="margin-left: 0.5rem; font-size: 0.8rem;"></i>
+        </button>
       </div>
     </div>
   </section>
@@ -185,7 +333,7 @@
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 3rem;">
         <div style="background: var(--bg-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); display: flex; gap: 1.5rem; align-items: center;">
-          <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=300&q=80" alt="Chocolate Tempering Curve" style="width: 120px; height: 120px; border-radius: var(--radius-sm); object-fit: cover;">
+          <img src="https://i.pinimg.com/1200x/0b/42/d8/0b42d88a11f5f8a9ef5b0f095a87ff4e.jpg" alt="Understanding Beta-V Crystal Tempering Curves" style="width: 120px; height: 120px; border-radius: var(--radius-sm); object-fit: cover;">
           <div>
             <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-champagne-gold); text-transform: uppercase;">Chocolate Science</span>
             <h3 style="font-size: 1.15rem; margin: 0.25rem 0 0.5rem 0;"><a href="blog-details.html">Understanding Beta-V Crystal Tempering Curves</a></h3>
@@ -194,7 +342,7 @@
         </div>
 
         <div style="background: var(--bg-surface); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); display: flex; gap: 1.5rem; align-items: center;">
-          <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=300&q=80" alt="Swiss Meringue Stability" style="width: 120px; height: 120px; border-radius: var(--radius-sm); object-fit: cover;">
+          <img src="https://i.pinimg.com/736x/11/d6/00/11d600393905b163bad7117bd8fbf22d.jpg" alt="Swiss vs French vs Italian Meringue Stability" style="width: 120px; height: 120px; border-radius: var(--radius-sm); object-fit: cover;">
           <div>
             <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-raspberry); text-transform: uppercase;">Buttercream Science</span>
             <h3 style="font-size: 1.15rem; margin: 0.25rem 0 0.5rem 0;"><a href="blog-details.html">Swiss vs French vs Italian Meringue Stability</a></h3>
@@ -217,7 +365,7 @@
         </div>
 
         <div>
-          <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80" alt="Cacao Harvest Ecuador" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%;">
+          <img src="https://i.pinimg.com/736x/47/56/75/47567530ad926b52eacd33fe33566c8a.jpg" alt="Cacao Harvest Ecuador" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; height: 360px; object-fit: cover;">
         </div>
       </div>
     </div>
@@ -240,11 +388,78 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info & Social -->
+        <div class="footer-col brand-col">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
+            <div class="brand-text">
+              <div class="brand-title" style="color: #fff;">Ganache <span>Gallery</span></div>
+              <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
+            </div>
+          </div>
+          <p class="footer-desc">An award-winning luxury cake studio & artisanal dessert atelier. Crafting bespoke culinary sculptures for weddings, galas, and private celebrations worldwide.</p>
+          <div class="footer-socials">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Collections -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#signature-cakes">Signature Cakes</a></li>
+            <li><a href="services.html#wedding-suite">Wedding Tiers</a></li>
+            <li><a href="services.html#cupcakes">Artisan Cupcakes</a></li>
+            <li><a href="services.html#dessert-jars">Dessert Jars</a></li>
+            <li><a href="services.html#macarons">French Macarons</a></li>
+            <li><a href="services.html#chocolates">Valrhona Chocolates</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Atelier / Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Atelier</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col newsletter-col">
+          <h4 class="footer-col-title">The Private List</h4>
+          <p class="footer-newsletter-desc">Receive exclusive previews, private tasting invitations, and seasonal pastry insights before anyone else.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to The Private List!');">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Divider line with central badge dot -->
+      <div class="footer-divider-wrap">
+        <div class="footer-divider-line"></div>
+        <div class="footer-divider-badge">
+          <span class="badge-dot"></span>
+        </div>
+        <div class="footer-divider-line"></div>
+      </div>
+
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <div>&copy; 2026 Ganache Gallery. All rights reserved.</div>
-        <div style="display: flex; gap: 1.5rem;">
+        <div class="copyright-text">&copy; 2026 Ganache Gallery. All rights reserved. Established 2012, Paris.</div>
+        <div class="footer-bottom-links">
           <a href="privacy-policy.html">Privacy Policy</a>
           <a href="terms-and-conditions.html">Terms & Conditions</a>
+          <a href="sitemap.html">Sitemap</a>
         </div>
       </div>
     </div>

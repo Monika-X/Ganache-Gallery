@@ -24,7 +24,10 @@
         <div class="brand-logo-icon">
           <i class="fa-solid fa-cake-candles"></i>
         </div>
-        <div class="brand-title">Ganache <span>Gallery</span></div>
+        <div class="brand-text">
+          <div class="brand-title">Ganache <span>Gallery</span></div>
+          <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
+        </div>
       </a>
 
       <nav class="nav-menu">
@@ -32,19 +35,6 @@
         <a href="pages/home-2.html" class="nav-link">Home 2</a>
         <a href="pages/about.html" class="nav-link">About Atelier</a>
         <a href="pages/services.html" class="nav-link">Bespoke Services</a>
-        
-        <div class="nav-dropdown">
-          <a href="javascript:void(0)" class="nav-link">Collections <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.2rem;"></i></a>
-          <div class="dropdown-menu">
-            <a href="pages/services.html#signature-cakes" class="dropdown-item">Signature Cakes</a>
-            <a href="pages/services.html#celebration-cakes" class="dropdown-item">Celebration Cakes</a>
-            <a href="pages/services.html#cupcakes" class="dropdown-item">Artisan Cupcakes</a>
-            <a href="pages/services.html#dessert-jars" class="dropdown-item">Dessert Jars</a>
-            <a href="pages/services.html#chocolates" class="dropdown-item">Chocolate Boxes</a>
-            <a href="pages/services.html#macarons" class="dropdown-item">French Macarons</a>
-          </div>
-        </div>
-
         <a href="pages/blog.html" class="nav-link">Journal</a>
         <a href="pages/contact.html" class="nav-link">Contact</a>
       </nav>
@@ -56,15 +46,7 @@
         </button>
 
         <!-- RTL/LTR Toggle Button -->
-        <button class="icon-btn rtl-toggle" title="Toggle Text Orientation">
-          <i class="fa-solid fa-language"></i>
-        </button>
-
-        <!-- Inquiry Consultation Bag Button -->
-        <a href="pages/contact.html#brief-builder" class="icon-btn" title="Consultation Inquiry">
-          <i class="fa-solid fa-bag-shopping"></i>
-          <span class="badge-count">0</span>
-        </a>
+        <button class="rtl-toggle-btn rtl-toggle" title="Toggle Text Orientation">RTL</button>
 
         <!-- Mobile Hamburger Toggle -->
         <div class="hamburger">
@@ -99,7 +81,7 @@
     <div class="hero-slider">
       <!-- Slide 1 -->
       <div class="slide active">
-        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="slide-bg" style="background-image: url('https://i.pinimg.com/1200x/ef/90/c8/ef90c8b20fa8def35b74c4b3eb32455a.jpg');"></div>
         <div class="slide-overlay"></div>
         <div class="container slide-content">
           <span class="tag-label">Artisan Patisserie & Haute Couture Desserts</span>
@@ -202,22 +184,22 @@
       </div>
 
       <div class="filter-bar">
-        <button class="filter-btn active">All Creations</button>
-        <button class="filter-btn">Signature Cakes</button>
-        <button class="filter-btn">Celebration Tiers</button>
-        <button class="filter-btn">Dessert Jars</button>
-        <button class="filter-btn">French Macarons</button>
-        <button class="filter-btn">Chocolates</button>
+        <button class="filter-btn active" data-filter="all">All Creations</button>
+        <button class="filter-btn" data-filter="signature-cakes">Signature Cakes</button>
+        <button class="filter-btn" data-filter="celebration-tiers">Celebration Tiers</button>
+        <button class="filter-btn" data-filter="dessert-jars">Dessert Jars</button>
+        <button class="filter-btn" data-filter="french-macarons">French Macarons</button>
+        <button class="filter-btn" data-filter="chocolates">Chocolates</button>
       </div>
 
       <div class="product-grid">
-        <article class="product-card">
+        <article class="product-card" data-category="signature-cakes">
           <div class="product-img-wrap">
             <span class="product-badge">Bestseller</span>
-            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=600&q=80" class="product-img" alt="The Grand Velvet Rose Cake">
+            <img src="https://i.pinimg.com/736x/cf/db/24/cfdb247715f8bf78009b6dca85716a26.jpg" class="product-img" alt="The Grand Velvet Rose Cake">
             <div class="product-overlay-actions">
               <button class="icon-btn" onclick="addToInquiry('The Grand Velvet Rose Cake', 240)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
-              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+              <button class="icon-btn" data-lightbox="https://i.pinimg.com/736x/cf/db/24/cfdb247715f8bf78009b6dca85716a26.jpg" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
           <div class="product-content">
@@ -231,13 +213,13 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="celebration-tiers">
           <div class="product-img-wrap">
             <span class="product-badge" style="background: var(--color-champagne-gold); color: var(--color-espresso);">Custom Tier</span>
-            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Champagne Gold Botanical Tier">
+            <img src="https://i.pinimg.com/1200x/f3/4f/cb/f34fcb6bcf0ab46bea597e44c20adbfb.jpg" class="product-img" alt="Champagne Gold Botanical Tier">
             <div class="product-overlay-actions">
               <button class="icon-btn" onclick="addToInquiry('Champagne Gold Botanical Tier', 480)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
-              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+              <button class="icon-btn" data-lightbox="https://i.pinimg.com/1200x/f3/4f/cb/f34fcb6bcf0ab46bea597e44c20adbfb.jpg" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
           <div class="product-content">
@@ -251,13 +233,13 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="french-macarons">
           <div class="product-img-wrap">
             <span class="product-badge" style="background: var(--color-raspberry); color: #fff;">Artisan Box</span>
-            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Royal Macaron Coffret">
+            <img src="https://i.pinimg.com/1200x/bc/c6/f9/bcc6f9d251c647387013f4e6db50bbb3.jpg" class="product-img" alt="Royal Macaron Coffret">
             <div class="product-overlay-actions">
               <button class="icon-btn" onclick="addToInquiry('Royal Macaron Coffret', 68)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
-              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+              <button class="icon-btn" data-lightbox="https://i.pinimg.com/1200x/bc/c6/f9/bcc6f9d251c647387013f4e6db50bbb3.jpg" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
           <div class="product-content">
@@ -271,12 +253,12 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="dessert-jars">
           <div class="product-img-wrap">
-            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Espresso Praline Dessert Jars">
+            <img src="https://i.pinimg.com/1200x/8f/fa/f1/8ffaf19b2bb7773cd4f040ae67f8ca73.jpg" class="product-img" alt="Espresso Praline Dessert Jars">
             <div class="product-overlay-actions">
               <button class="icon-btn" onclick="addToInquiry('Espresso Praline Dessert Jars', 55)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
-              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+              <button class="icon-btn" data-lightbox="https://i.pinimg.com/1200x/8f/fa/f1/8ffaf19b2bb7773cd4f040ae67f8ca73.jpg" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
           <div class="product-content">
@@ -290,12 +272,12 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="chocolates">
           <div class="product-img-wrap">
-            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Valrhona Truffle Collection">
+            <img src="https://i.pinimg.com/736x/fc/27/c5/fc27c51024b149e87158d39d212db3ce.jpg" class="product-img" alt="Valrhona Truffle Collection">
             <div class="product-overlay-actions">
               <button class="icon-btn" onclick="addToInquiry('Valrhona Truffle Collection', 85)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
-              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+              <button class="icon-btn" data-lightbox="https://i.pinimg.com/736x/fc/27/c5/fc27c51024b149e87158d39d212db3ce.jpg" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
           <div class="product-content">
@@ -309,13 +291,13 @@
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="signature-cakes">
           <div class="product-img-wrap">
             <span class="product-badge" style="background: var(--color-dark-cocoa);">New Arrival</span>
-            <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Wild Berry Floral Cupcakes">
+            <img src="https://i.pinimg.com/736x/ac/82/d1/ac82d16af0ce62f05979a6ac49f33f7a.jpg" class="product-img" alt="Wild Berry Floral Cupcakes">
             <div class="product-overlay-actions">
               <button class="icon-btn" onclick="addToInquiry('Wild Berry Floral Cupcakes', 60)" title="Add to Inquiry Brief"><i class="fa-solid fa-plus"></i></button>
-              <button class="icon-btn" data-lightbox="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=1200&q=80" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
+              <button class="icon-btn" data-lightbox="https://i.pinimg.com/736x/ac/82/d1/ac82d16af0ce62f05979a6ac49f33f7a.jpg" title="Enlarge Photo"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
           <div class="product-content">
@@ -497,60 +479,77 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+        <!-- Col 1: Brand Info & Social -->
+        <div class="footer-col brand-col">
           <div class="brand-logo" style="margin-bottom: 1.25rem;">
             <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
-            <div class="brand-title" style="color: #fff;">Ganache <span>Gallery</span></div>
+            <div class="brand-text">
+              <div class="brand-title" style="color: #fff;">Ganache <span>Gallery</span></div>
+              <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
+            </div>
           </div>
-          <p style="color: var(--color-blush); font-size: 0.9rem; margin-bottom: 1.5rem;">An award-winning luxury cake studio & artisanal dessert atelier. Crafting bespoke culinary sculptures for weddings, galas, and private celebrations worldwide.</p>
-          <div style="display: flex; gap: 0.75rem;">
-            <a href="javascript:void(0)" class="icon-btn" style="background: rgba(255,255,255,0.1); color: #fff;"><i class="fa-brands fa-instagram"></i></a>
-            <a href="javascript:void(0)" class="icon-btn" style="background: rgba(255,255,255,0.1); color: #fff;"><i class="fa-brands fa-pinterest-p"></i></a>
-            <a href="javascript:void(0)" class="icon-btn" style="background: rgba(255,255,255,0.1); color: #fff;"><i class="fa-brands fa-facebook-f"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <div class="footer-links">
-            <a href="index.html">Home Studio</a>
-            <a href="pages/home-2.html">Editorial Showcase</a>
-            <a href="pages/about.html">Our Heritage</a>
-            <a href="pages/services.html">Bespoke Services</a>
-            <a href="pages/blog.html">Pastry Journal</a>
-            <a href="pages/contact.html">Studio Contact</a>
+          <p class="footer-desc">An award-winning luxury cake studio & artisanal dessert atelier. Crafting bespoke culinary sculptures for weddings, galas, and private celebrations worldwide.</p>
+          <div class="footer-socials">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
 
+        <!-- Col 2: Collections -->
         <div class="footer-col">
-          <h4>Collections</h4>
-          <div class="footer-links">
-            <a href="pages/services.html#signature-cakes">Signature Cakes</a>
-            <a href="pages/services.html#wedding-suite">Wedding Tiers</a>
-            <a href="pages/services.html#cupcakes">Artisan Cupcakes</a>
-            <a href="pages/services.html#dessert-jars">Dessert Jars</a>
-            <a href="pages/services.html#macarons">French Macarons</a>
-            <a href="pages/services.html#chocolates">Valrhona Chocolates</a>
-          </div>
+          <h4 class="footer-col-title">Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/services.html#signature-cakes">Signature Cakes</a></li>
+            <li><a href="pages/services.html#wedding-suite">Wedding Tiers</a></li>
+            <li><a href="pages/services.html#cupcakes">Artisan Cupcakes</a></li>
+            <li><a href="pages/services.html#dessert-jars">Dessert Jars</a></li>
+            <li><a href="pages/services.html#macarons">French Macarons</a></li>
+            <li><a href="pages/services.html#chocolates">Valrhona Chocolates</a></li>
+          </ul>
         </div>
 
+        <!-- Col 3: Atelier / Navigation -->
         <div class="footer-col">
-          <h4>Atelier Details</h4>
-          <p style="font-size: 0.88rem; color: var(--color-blush);"><i class="fa-solid fa-location-dot" style="color: var(--color-champagne-gold); margin-right: 0.5rem;"></i> 742 Faubourg Saint-Honoré, Paris</p>
-          <p style="font-size: 0.88rem; color: var(--color-blush);"><i class="fa-solid fa-phone" style="color: var(--color-champagne-gold); margin-right: 0.5rem;"></i> +33 1 42 68 55 00</p>
-          <p style="font-size: 0.88rem; color: var(--color-blush);"><i class="fa-solid fa-envelope" style="color: var(--color-champagne-gold); margin-right: 0.5rem;"></i> concierge@ganachegallery.com</p>
-          <div style="margin-top: 1rem;">
-            <a href="pages/sitemap.html" style="color: var(--color-champagne-gold); font-size: 0.85rem; text-decoration: underline;">View HTML Sitemap</a>
-          </div>
+          <h4 class="footer-col-title">Atelier</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/home-2.html">Home 2</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/services.html">Services</a></li>
+            <li><a href="pages/blog.html">Journal</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col newsletter-col">
+          <h4 class="footer-col-title">The Private List</h4>
+          <p class="footer-newsletter-desc">Receive exclusive previews, private tasting invitations, and seasonal pastry insights before anyone else.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to The Private List!');">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">JOIN</button>
+          </form>
         </div>
       </div>
 
+      <!-- Divider line with central badge dot -->
+      <div class="footer-divider-wrap">
+        <div class="footer-divider-line"></div>
+        <div class="footer-divider-badge">
+          <span class="badge-dot"></span>
+        </div>
+        <div class="footer-divider-line"></div>
+      </div>
+
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <div>&copy; 2026 Ganache Gallery Custom Desserts Studio. All rights reserved.</div>
-        <div style="display: flex; gap: 1.5rem;">
+        <div class="copyright-text">&copy; 2026 Ganache Gallery. All rights reserved. Established 2012, Paris.</div>
+        <div class="footer-bottom-links">
           <a href="pages/privacy-policy.html">Privacy Policy</a>
           <a href="pages/terms-and-conditions.html">Terms & Conditions</a>
-          <a href="pages/maintenance.html">Maintenance Status</a>
+          <a href="pages/sitemap.html">Sitemap</a>
         </div>
       </div>
     </div>
