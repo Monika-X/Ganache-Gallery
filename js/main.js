@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInquiryDrawer();
   initBlogPagination();
   initIndexPortfolioFilter();
+  initUniversalForms();
 });
 
 /* --------------------------------------------------------------------------
@@ -107,24 +108,37 @@ function initMobileNav() {
 
   backdrop.className = 'nav-backdrop';
   backdrop.style.cssText = `
-    position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 998;
-    opacity: 0; visibility: hidden; transition: all 0.3s ease;
+    position: fixed; inset: 0; background: rgba(18, 12, 11, 0.65); backdrop-filter: blur(4px); z-index: 998;
+    opacity: 0; visibility: hidden; transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   `;
   document.body.appendChild(backdrop);
+
+  const closeNav = () => {
+    if (mobileNav) mobileNav.classList.remove('active');
+    if (hamburger) hamburger.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+    backdrop.style.opacity = '0';
+    backdrop.style.visibility = 'hidden';
+  };
 
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', () => {
       const isActive = mobileNav.classList.toggle('active');
       hamburger.classList.toggle('open');
+      if (isActive) {
+        document.body.classList.add('no-scroll');
+      } else {
+        document.body.classList.remove('no-scroll');
+      }
       backdrop.style.opacity = isActive ? '1' : '0';
       backdrop.style.visibility = isActive ? 'visible' : 'hidden';
     });
 
-    backdrop.addEventListener('click', () => {
-      mobileNav.classList.remove('active');
-      hamburger.classList.remove('open');
-      backdrop.style.opacity = '0';
-      backdrop.style.visibility = 'hidden';
+    backdrop.addEventListener('click', closeNav);
+
+    const closeBtns = mobileNav.querySelectorAll('.mobile-nav-close, .mobile-link');
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', closeNav);
     });
   }
 }
@@ -484,3 +498,84 @@ function initIndexPortfolioFilter() {
     });
   });
 }
+
+/* --------------------------------------------------------------------------
+   13. UNIVERSAL FORM SUBMISSION & INLINE SUCCESS MESSAGING
+   -------------------------------------------------------------------------- */
+function initUniversalForms() {
+  document.querySelectorAll('form').forEach(form => {
+    // Avoid double binding if handled by order calculator
+    if (form.id === 'custom-order-wizard') return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      let msg = 'Thank you! Your request has been submitted successfully.';
+      if (form.classList.contains('footer-newsletter-form')) {
+        msg = 'Thank you for subscribing to The Private List!';
+      } else if (form.closest('#brief-builder')) {
+        msg = 'Thank you! Your custom design brief has been submitted successfully to Chef Hélène.';
+      } else if (form.querySelector('input[type="email"]') && document.title.includes('Maintenance')) {
+        msg = 'You have been added to the VIP Re-Opening Access List!';
+      } else if (form.querySelector('input[placeholder*="zip" i], input[placeholder*="Zip" i]')) {
+        msg = 'Zipcode verified! Premium courier delivery is available for your location.';
+      }
+
+      handleFormSubmit(e, msg);
+    });
+  });
+}
+
+window.handleFormSubmit = function(e, message) {
+  if (e && e.preventDefault) e.preventDefault();
+  const form = e ? (e.target || e.srcElement) : null;
+  const successMsg = message || 'Thank you! Action completed successfully.';
+  
+  if (form && form.reset) {
+    // Refresh / Reset ONLY input fields
+    form.reset();
+
+    // Remove any previous inline success message in this form
+    const existingAlert = form.querySelector('.form-success-alert');
+    if (existingAlert) existingAlert.remove();
+
+    // Create luxury inline success banner
+    const alertBox = document.createElement('div');
+    alertBox.className = 'form-success-alert';
+    alertBox.style.cssText = `
+      background: rgba(201, 168, 106, 0.15);
+      color: var(--color-champagne-gold, #C9A86A);
+      border: 1px solid var(--border-gold, #C9A86A);
+      padding: 0.85rem 1.25rem;
+      border-radius: var(--radius-md, 8px);
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      animation: fadeInUp 0.4s ease forwards;
+    `;
+    alertBox.innerHTML = `<i class="fa-solid fa-circle-check" style="font-size: 1.15rem; color: var(--color-champagne-gold, #C9A86A);"></i> <span>${successMsg}</span>`;
+    
+    // Append inside or after form
+    form.appendChild(alertBox);
+
+    // Fade out inline success alert after 6 seconds
+    setTimeout(() => {
+      if (alertBox.parentNode) {
+        alertBox.style.opacity = '0';
+        alertBox.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => alertBox.remove(), 500);
+      }
+    }, 6000);
+  }
+
+  // Display floating toast message
+  if (typeof showToast === 'function') {
+    showToast(successMsg);
+  }
+  return false;
+};

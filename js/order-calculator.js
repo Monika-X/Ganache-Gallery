@@ -48,10 +48,13 @@ function initCustomOrderForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('client-name')?.value || 'Valued Client';
-    const email = document.getElementById('client-email')?.value || '';
+    const msg = `Thank you ${name}! Your custom dessert inquiry has been submitted successfully to Chef Hélène. Our team will contact you within 24 hours.`;
     
-    alert(`Thank you ${name}! Your custom dessert atelier inquiry has been successfully submitted. Master Pastry Chef will review your brief within 24 hours. A copy has been dispatched to ${email}.`);
-    form.reset();
+    if (typeof handleFormSubmit === 'function') {
+      handleFormSubmit(e, msg);
+    } else {
+      form.reset();
+    }
     calculateEstimate();
   });
 
