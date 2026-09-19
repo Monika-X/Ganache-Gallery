@@ -608,15 +608,18 @@ ul, ol {
   text-decoration: none;
 }
 
-.mobile-link:hover,
-.mobile-link.active {
+.mobile-link:hover {
   background: rgba(201, 168, 106, 0.1);
   border-color: var(--border-gold);
   transform: translateX(4px);
 }
 
-[dir="rtl"] .mobile-link:hover,
-[dir="rtl"] .mobile-link.active {
+.mobile-link.active {
+  background: rgba(201, 168, 106, 0.1);
+  border-color: var(--border-gold);
+}
+
+[dir="rtl"] .mobile-link:hover {
   transform: translateX(-4px);
 }
 
@@ -1203,6 +1206,8 @@ ul, ol {
   border-radius: var(--radius-md);
   padding: 2.5rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .quote-icon {
@@ -1217,7 +1222,8 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
 }
 
 .author-avatar {
@@ -1770,6 +1776,7 @@ html[dir="rtl"] .timeline-dot {
   .nav-menu { display: none; }
   .navbar-cta-btn { display: none !important; }
   .hamburger { display: flex; }
+  .header-actions { margin-inline-start: auto; }
 
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1806,6 +1813,24 @@ html[dir="rtl"] .timeline-dot {
   div[style*="grid-template-columns: 1fr 1fr"],
   div[style*="grid-template-columns: 2fr 1fr"] {
     gap: 2rem !important;
+  }
+}
+
+/* --- FOOTER BOTTOM STACKING (<= 820px) ---
+   Prevents the copyright + legal links from wrapping unevenly on tablets
+   (e.g. 768px) where they cannot share a single row. */
+@media (max-width: 820px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
   }
 }
 
