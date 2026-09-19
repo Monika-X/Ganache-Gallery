@@ -509,6 +509,21 @@ function initUniversalForms() {
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      if (form.id === 'login-form') {
+        showToast('Welcome back! Signing you into the client portal...');
+        setTimeout(() => { window.location.href = getHomeUrl(); }, 1200);
+        return;
+      }
+      if (form.id === 'signup-form') {
+        if (form['confirm'] && form['password'] && form['confirm'].value !== form['password'].value) {
+          showToast('Passwords do not match. Please try again.');
+          return;
+        }
+        showToast('Account created! Welcome to the Ganache Gallery family...');
+        setTimeout(() => { window.location.href = getHomeUrl(); }, 1400);
+        return;
+      }
       
       let msg = 'Thank you! Your request has been submitted successfully.';
       if (form.classList.contains('footer-newsletter-form')) {
@@ -525,6 +540,10 @@ function initUniversalForms() {
     });
   });
 }
+
+window.getHomeUrl = function() {
+  return window.location.pathname.includes('/pages/') ? '../index.html' : 'index.html';
+};
 
 window.handleFormSubmit = function(e, message) {
   if (e && e.preventDefault) e.preventDefault();

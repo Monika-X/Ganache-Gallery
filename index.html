@@ -33,13 +33,15 @@
       <nav class="nav-menu">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="pages/home-2.html" class="nav-link">Home 2</a>
-        <a href="pages/about.html" class="nav-link">About Atelier</a>
-        <a href="pages/services.html" class="nav-link">Bespoke Services</a>
+        <a href="pages/about.html" class="nav-link">About</a>
+        <a href="pages/services.html" class="nav-link">Services</a>
         <a href="pages/blog.html" class="nav-link">Journal</a>
         <a href="pages/contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="header-actions">
+        <!-- Login Button -->
+        <a href="pages/login.html" class="btn btn-outline navbar-login-btn">Login <i class="fa-solid fa-user"></i></a>
         <!-- Contact CTA Button -->
         <a href="pages/contact.html" class="btn btn-gold navbar-cta-btn">Book Consultation <i class="fa-solid fa-calendar-check"></i></a>
 
@@ -90,12 +92,12 @@
       </a>
       <a href="pages/about.html" class="mobile-link">
         <span class="mobile-link-num">03</span>
-        <span class="mobile-link-text">About Atelier</span>
+        <span class="mobile-link-text">About</span>
         <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
       </a>
       <a href="pages/services.html" class="mobile-link">
         <span class="mobile-link-num">04</span>
-        <span class="mobile-link-text">Bespoke Services</span>
+        <span class="mobile-link-text">Services</span>
         <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
       </a>
       <a href="pages/blog.html" class="mobile-link">
@@ -118,6 +120,7 @@
     <!-- VIP Actions & Contact Footer -->
     <div class="mobile-nav-footer">
       <div class="mobile-nav-actions">
+        <a href="pages/login.html" class="btn btn-outline mobile-portal-btn">Login <i class="fa-solid fa-user"></i></a>
         <a href="pages/contact.html" class="btn btn-gold mobile-cta-btn">Book Consultation <i class="fa-solid fa-calendar-check"></i></a>
       </div>
 
@@ -388,22 +391,22 @@
         <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">1. Select Sponge Base:</h3>
         <div class="flavor-grid">
           <div class="flavor-card sponge-card selected" data-name="Dark Belgian Chocolate" data-note="70% Valrhona dark chocolate sponge with rich cocoa depth.">
-            <i class="fa-solid fa-cookie flavor-icon"></i>
+            <img class="flavor-card-img" src="https://i.pinimg.com/736x/b7/73/b0/b773b01d1dceb7d269290dda917afee6.jpg" alt="Dark Belgian cocoa sponge cake" loading="lazy">
             <h4 class="flavor-title">Dark Belgian Cocoa</h4>
             <p class="flavor-notes">Rich 70% Valrhona ganache base with velvet crumb</p>
           </div>
           <div class="flavor-card sponge-card" data-name="Tahitian Vanilla Bean" data-note="Light butter sponge infused with hand-scraped Tahitian vanilla pods.">
-            <i class="fa-solid fa-seedling flavor-icon"></i>
+            <img class="flavor-card-img" src="https://i.pinimg.com/736x/48/b6/c3/48b6c35e6a7f26c4f1589850337a1637.jpg" alt="Tahitian vanilla sponge cake" loading="lazy">
             <h4 class="flavor-title">Tahitian Vanilla Pod</h4>
             <p class="flavor-notes">Delicate, floral, and aromatic crumb texture</p>
           </div>
           <div class="flavor-card sponge-card" data-name="Meyer Lemon Almond" data-note="Zesty Italian lemon oil paired with finely ground Bronte almonds.">
-            <i class="fa-solid fa-lemon flavor-icon"></i>
+            <img class="flavor-card-img" src="https://i.pinimg.com/1200x/2c/b9/2b/2cb92b8445a8f593b6c987207dd06175.jpg" alt="Meyer lemon and almond cake" loading="lazy">
             <h4 class="flavor-title">Meyer Lemon Almond</h4>
             <p class="flavor-notes">Bright citrus zest with rich nutty moisture</p>
           </div>
           <div class="flavor-card sponge-card" data-name="Earl Grey & Lavender" data-note="Infused black tea sponge subtle floral top notes.">
-            <i class="fa-solid fa-mug-hot flavor-icon"></i>
+            <img class="flavor-card-img" src="https://i.pinimg.com/1200x/37/4a/1a/374a1a3177710d5949804e7e7a286975.jpg" alt="Earl grey lavender tea" loading="lazy">
             <h4 class="flavor-title">Earl Grey Lavender</h4>
             <p class="flavor-notes">Bergamot oil essence with French lavender bloom</p>
           </div>
@@ -412,22 +415,22 @@
         <h3 style="font-size: 1.3rem; margin: 2rem 0 1rem 0;">2. Select Signature Filling:</h3>
         <div class="flavor-grid">
           <div class="flavor-card filling-card selected" data-name="Raspberry Rose Compote" data-note="Tart wild raspberries simmered with organic damask rose water.">
-            <i class="fa-solid fa-heart flavor-icon" style="color: var(--color-raspberry);"></i>
+            <img class="flavor-card-img" src="https://i.pinimg.com/736x/89/7b/c3/897bc36df207e60f4c46aee891da30d8.jpg" alt="Wild raspberries compote" loading="lazy">
             <h4 class="flavor-title">Raspberry Rose Compote</h4>
             <p class="flavor-notes">Tart wild raspberries infused with organic rose water</p>
           </div>
           <div class="flavor-card filling-card" data-name="Salted Caramel Praline" data-note="Slow-cooked Breton salted caramel with caramelized hazelnut crunch.">
-            <i class="fa-solid fa-stroopwafel flavor-icon"></i>
+            <img class="flavor-card-img" src="https://i.pinimg.com/1200x/18/c6/f8/18c6f80a8fdb34b271580510d75991eb.jpg" alt="Salted caramel dessert" loading="lazy">
             <h4 class="flavor-title">Salted Caramel Praline</h4>
             <p class="flavor-notes">Breton sea salt caramel with hazelnut crunch</p>
           </div>
           <div class="flavor-card filling-card" data-name="Passionfruit Mango Curd" data-note="Tropical passionfruit reduction with smooth creamy finish.">
-            <i class="fa-solid fa-sun flavor-icon"></i>
+            <img class="flavor-card-img" src="https://i.pinimg.com/736x/5b/4b/ac/5b4bacb425dbce46b3f00f7d3c634901.jpg" alt="Passionfruit curd" loading="lazy">
             <h4 class="flavor-title">Passionfruit Curd</h4>
             <p class="flavor-notes">Exotic tropical fruit reduction with bright acidity</p>
           </div>
           <div class="flavor-card filling-card" data-name="White Chocolate Champagne" data-note="Velvety white chocolate mousse spiked with Dom Pérignon.">
-            <i class="fa-solid fa-champagne-glasses flavor-icon"></i>
+            <img class="flavor-card-img" src="https://i.pinimg.com/1200x/fe/41/e6/fe41e634432bf60d1d47f4212b1d13da.jpg" alt="White chocolate champagne mousse" loading="lazy">
             <h4 class="flavor-title">White Chocolate Champagne</h4>
             <p class="flavor-notes">Silky mousse infused with vintage champagne</p>
           </div>

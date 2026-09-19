@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms & Conditions | Ganache Gallery</title>
-  <meta name="description" content="Read the terms and conditions for custom order bookings, payment schedules, delivery policies, and cancellation terms at Ganache Gallery.">
-  
+  <title>Create Account | Ganache Gallery</title>
+  <meta name="description" content="Join the Ganache Gallery client portal to book tastings, submit custom design briefs, and manage private orders.">
+
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
@@ -112,54 +112,62 @@
     </div>
   </aside>
 
-  <!-- SECTION 1: TERMS HERO HEADER -->
+  <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="container-narrow">
-      <h1 class="page-hero-title">Atelier Terms & Client Agreements</h1>
-      <p style="color: var(--color-blush);">Effective Date: August 26, 2026</p>
+    <div class="container">
+      <h1 class="page-hero-title">Join The Atelier</h1>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i>
+        <span>Create Account</span>
+      </div>
     </div>
   </section>
 
-  <!-- SECTION 2: BOOKING RETAINERS & PAYMENTS -->
-  <section class="section-padding">
-    <div class="container-narrow" style="line-height: 1.8;">
-      <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">1. Retainer & Payment Schedule</h2>
-      <p>To reserve an atelier production date on our master calendar, a non-refundable 50% retainer and a signed design agreement are required. The remaining 50% balance must be settled no later than 14 business days prior to your scheduled event date.</p>
-      <p>Orders requested fewer than 14 days in advance require full payment upon confirmation and are subject to expedited artisan sourcing fees.</p>
-    </div>
-  </section>
+  <!-- SIGNUP SECTION -->
+  <section class="section-padding auth-section">
+    <div class="container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <div class="auth-icon"><i class="fa-solid fa-user-plus"></i></div>
+          <span class="tag-label">New Client Portal</span>
+          <h2 class="section-title" style="margin-top: 0.5rem;">Create Your Account</h2>
+          <p class="auth-subtitle">Become a Ganache Gallery client and unlock private tastings, design briefs, and order history.</p>
+        </div>
 
-  <!-- SECTION 3: LEAD TIMES & REVISIONS -->
-  <section class="section-padding" style="background: var(--bg-secondary);">
-    <div class="container-narrow" style="line-height: 1.8;">
-      <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">2. Design Brief Finalization & Revisions</h2>
-      <p>All custom cake dimensions, tier counts, flavor choices, and structural color schemes must be finalized in writing at least 21 days prior to delivery. Modifications requested after this deadline will be accommodated at Chef Hélène’s discretion and may incur additional sculpting fees.</p>
-    </div>
-  </section>
+        <form class="auth-form" id="signup-form">
+          <div class="auth-field">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" name="name" placeholder="Hélène Mercier" required>
+          </div>
 
-  <!-- SECTION 4: CANCELLATIONS & REFUNDS -->
-  <section class="section-padding">
-    <div class="container-narrow" style="line-height: 1.8;">
-      <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">3. Cancellations & Rescheduling Policy</h2>
-      <p>If an event must be cancelled or postponed, please notify us immediately in writing. Retainers are non-refundable but may be transferred to a future date within 12 months, subject to atelier calendar availability and 30 days advance notice.</p>
-      <p>Cancellations made within 14 days of the event date are non-refundable as specialty ingredients and custom sugar florals will have already been handcrafted.</p>
-    </div>
-  </section>
+          <div class="auth-field">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" name="email" placeholder="you@example.com" required>
+          </div>
 
-  <!-- SECTION 5: DELIVERY & SETUP DIRECTIVES -->
-  <section class="section-padding" style="background: var(--bg-secondary);">
-    <div class="container-narrow" style="line-height: 1.8;">
-      <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">4. Refrigerated Delivery & On-Site Setup</h2>
-      <p>Ganache Gallery assumes full responsibility for the structural integrity of your cake during transit and on-site assembly by our team. Once the cake has been set up at your venue and signed off by the venue coordinator, responsibility transfers to the venue management.</p>
-      <p>Cakes must be displayed in a climate-controlled room under 22°C (71°F) away from direct sunlight, heating vents, or outdoor elements.</p>
-    </div>
-  </section>
+          <div class="auth-field">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" name="password" placeholder="Minimum 8 characters" minlength="8" required>
+          </div>
 
-  <!-- SECTION 6: DIET & ALLERGEN DISCLAIMER -->
-  <section class="section-padding">
-    <div class="container-narrow" style="line-height: 1.8;">
-      <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">5. Dietary Disclaimers & Allergen Safety</h2>
-      <p>While we offer gluten-conscious and nut-conscious recipes, our atelier uses equipment that processes wheat, dairy, eggs, soy, peanuts, and tree nuts. Clients are responsible for notifying their event guests of potential allergen exposure.</p>
+          <div class="auth-field">
+            <label for="signup-confirm">Confirm Password</label>
+            <input type="password" id="signup-confirm" name="confirm" placeholder="Re-enter your password" minlength="8" required>
+          </div>
+
+          <label class="auth-check" style="margin-bottom: 1.25rem;">
+            <input type="checkbox" name="terms" required> <span>I agree to the <a href="terms-and-conditions.html" style="color: var(--color-champagne-gold); text-decoration: underline;">Terms & Conditions</a> and <a href="privacy-policy.html" style="color: var(--color-champagne-gold); text-decoration: underline;">Privacy Policy</a></span>
+          </label>
+
+          <button type="submit" class="btn btn-gold auth-submit">Create Account <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+
+        <div class="auth-switch">
+          <p>Already have an account?</p>
+          <a href="login.html" class="btn btn-outline" style="padding: 0.5rem 1.25rem; font-size: 0.85rem; font-weight: 700;">Sign In Instead <i class="fa-solid fa-right-to-bracket"></i></a>
+        </div>
+      </div>
     </div>
   </section>
 
