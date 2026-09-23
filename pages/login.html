@@ -13,104 +13,11 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="../index.html" class="brand-logo">
-        <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
-        <div class="brand-text">
-          <div class="brand-title">Ganache <span>Gallery</span></div>
-          <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
-        </div>
-      </a>
-
-      <nav class="nav-menu">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="home-2.html" class="nav-link">Home 2</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="blog.html" class="nav-link">Journal</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <a href="login.html" class="btn btn-outline navbar-login-btn">Login <i class="fa-solid fa-user"></i></a>
-        <a href="contact.html" class="btn btn-gold navbar-cta-btn">Book Consultation <i class="fa-solid fa-calendar-check"></i></a>
-        <button class="icon-btn theme-toggle" title="Toggle Light/Dark Mode"><i class="fa-solid fa-moon"></i></button>
-        <button class="rtl-toggle-btn rtl-toggle" title="Toggle Text Orientation">RTL</button>
-        <div class="hamburger"><span></span><span></span><span></span></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Navigation Drawer (Haute Couture Redesign) -->
-  <aside class="mobile-nav">
-    <div class="mobile-nav-header">
-      <a href="../index.html" class="brand-logo">
-        <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
-        <div class="brand-text">
-          <div class="brand-title">Ganache <span>Gallery</span></div>
-          <span class="brand-tagline">Haute Couture Desserts</span>
-        </div>
-      </a>
-      <button class="mobile-nav-close" title="Close Menu"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-
-    <div class="mobile-links">
-      <a href="../index.html" class="mobile-link">
-        <span class="mobile-link-num">01</span>
-        <span class="mobile-link-text">Home</span>
-        <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
-      </a>
-      <a href="home-2.html" class="mobile-link">
-        <span class="mobile-link-num">02</span>
-        <span class="mobile-link-text">Home 2 (Editorial)</span>
-        <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
-      </a>
-      <a href="about.html" class="mobile-link">
-        <span class="mobile-link-num">03</span>
-        <span class="mobile-link-text">About</span>
-        <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
-      </a>
-      <a href="services.html" class="mobile-link">
-        <span class="mobile-link-num">04</span>
-        <span class="mobile-link-text">Services</span>
-        <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
-      </a>
-      <a href="blog.html" class="mobile-link">
-        <span class="mobile-link-num">05</span>
-        <span class="mobile-link-text">Pastry Journal</span>
-        <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
-      </a>
-      <a href="contact.html" class="mobile-link">
-        <span class="mobile-link-num">06</span>
-        <span class="mobile-link-text">Contact & Bookings</span>
-        <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
-      </a>
-      <a href="sitemap.html" class="mobile-link">
-        <span class="mobile-link-num">07</span>
-        <span class="mobile-link-text">Sitemap</span>
-        <i class="fa-solid fa-chevron-right mobile-link-arrow"></i>
-      </a>
-    </div>
-
-    <div class="mobile-nav-footer">
-      <div class="mobile-nav-actions">
-        <a href="login.html" class="btn btn-outline mobile-portal-btn">Login <i class="fa-solid fa-user"></i></a>
-        <a href="contact.html" class="btn btn-gold mobile-cta-btn">Book Consultation <i class="fa-solid fa-calendar-check"></i></a>
-      </div>
-
-      <div class="mobile-nav-contact">
-        <p><a href="https://maps.google.com/?q=742+Faubourg+Saint-Honore+Paris" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;"><i class="fa-solid fa-location-dot" style="color: var(--color-champagne-gold);"></i> Paris Flagship Atelier</a></p>
-        <div class="mobile-nav-socials">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-      </div>
-    </div>
-  </aside>
+  <!-- AUTH PILL — Theme + RTL toggles (pill, top-right corner) -->
+  <div class="auth-pill">
+    <button class="icon-btn theme-toggle" title="Toggle Light/Dark Mode" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    <button class="rtl-toggle-btn rtl-toggle" title="Toggle Text Orientation" aria-label="Toggle RTL">RTL</button>
+  </div>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
@@ -127,6 +34,13 @@
   <!-- LOGIN SECTION -->
   <section class="section-padding auth-section">
     <div class="container">
+      <a href="../index.html" class="brand-logo auth-brand-logo" aria-label="Ganache Gallery — Home">
+        <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
+        <div class="brand-text">
+          <div class="brand-title">Ganache <span>Gallery</span></div>
+          <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
+        </div>
+      </a>
       <div class="auth-card">
         <div class="auth-header">
           <div class="auth-icon"><i class="fa-solid fa-user-lock"></i></div>
@@ -163,86 +77,6 @@
       </div>
     </div>
   </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Col 1: Brand Info & Social -->
-        <div class="footer-col brand-col">
-          <a href="../index.html" class="brand-logo" style="text-decoration: none; margin-bottom: 1.25rem;">
-            <div class="brand-logo-icon"><i class="fa-solid fa-cake-candles"></i></div>
-            <div class="brand-text">
-              <div class="brand-title" style="color: #fff;">Ganache <span>Gallery</span></div>
-              <span class="brand-tagline">Haute Couture Desserts & Bespoke Cakes</span>
-            </div>
-          </a>
-          <p class="footer-desc">An award-winning luxury cake studio & artisanal dessert atelier. Crafting bespoke culinary sculptures for weddings, galas, and private celebrations worldwide.</p>
-          <div class="footer-socials">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-
-        <!-- Col 2: Collections -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Collections</h4>
-          <ul class="footer-links-list">
-            <li><a href="services.html#signature-cakes">Signature Cakes</a></li>
-            <li><a href="services.html#wedding-suite">Wedding Tiers</a></li>
-            <li><a href="services.html#cupcakes">Artisan Cupcakes</a></li>
-            <li><a href="services.html#dessert-jars">Dessert Jars</a></li>
-            <li><a href="services.html#macarons">French Macarons</a></li>
-            <li><a href="services.html#chocolates">Valrhona Chocolates</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Atelier / Navigation -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Atelier</h4>
-          <ul class="footer-links-list">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="home-2.html">Home 2</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="blog.html">Journal</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Newsletter -->
-        <div class="footer-col newsletter-col">
-          <h4 class="footer-col-title">The Private List</h4>
-          <p class="footer-newsletter-desc">Receive exclusive previews, private tasting invitations, and seasonal pastry insights before anyone else.</p>
-          <form class="footer-newsletter-form" onsubmit="return handleFormSubmit(event, 'Thank you for subscribing to The Private List!');">
-            <input type="email" placeholder="Your email" class="newsletter-input" required>
-            <button type="submit" class="newsletter-btn">JOIN</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- Divider line with central badge dot -->
-      <div class="footer-divider-wrap">
-        <div class="footer-divider-line"></div>
-        <div class="footer-divider-badge">
-          <span class="badge-dot"></span>
-        </div>
-        <div class="footer-divider-line"></div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <div class="copyright-text">&copy; 2026 Ganache Gallery. All rights reserved. Established 2012, Paris.</div>
-        <div class="footer-bottom-links">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms-and-conditions.html">Terms & Conditions</a>
-          <a href="sitemap.html">Sitemap</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <button class="back-to-top" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
 
